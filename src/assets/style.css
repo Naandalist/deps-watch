@@ -101,6 +101,26 @@ h2 {
   line-height: 1.45;
 }
 
+.today-more {
+  margin: 0 0 10px;
+  border-top: 1px solid var(--line);
+}
+
+.today-more summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 10px 0;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.today-more summary::-webkit-details-marker { display: none; }
+.today-more summary::before { content: "+ "; }
+.today-more[open] summary::before { content: "\2212 "; }
+.today-more[open] .when-closed { display: none; }
+.today-more:not([open]) .when-open { display: none; }
+
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

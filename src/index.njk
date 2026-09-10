@@ -32,9 +32,26 @@ permalink: index.html
       {% if board.today.length %}
         <ul class="pkg-list">
           {% for item in board.today %}
-            <li>{% include "card.njk" %}</li>
+            {% if loop.first %}
+              <li>{% include "card.njk" %}</li>
+            {% endif %}
           {% endfor %}
         </ul>
+        {% if board.today.length > 1 %}
+          <details class="today-more">
+            <summary>
+              <span class="when-closed">Show {{ board.today.length - 1 }} more</span>
+              <span class="when-open">Show less</span>
+            </summary>
+            <ul class="pkg-list">
+              {% for item in board.today %}
+                {% if not loop.first %}
+                  <li>{% include "card.njk" %}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </details>
+        {% endif %}
       {% else %}
         <p class="empty">No status changes in this update cycle.</p>
       {% endif %}
