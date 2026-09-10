@@ -1,37 +1,21 @@
-<article class="card severity-{{ item.severity | lower }}">
-  <header class="card-top">
-    <h3 class="package">{{ item.package }}</h3>
-    <span class="pill severity">{{ item.severity }}</span>
-  </header>
-
+<article class="notice severity-{{ item.severity | lower }} status-{{ item.status }}">
+  <h3 class="package">{{ item.package }}</h3>
   <p class="meta">
-    <span class="status">{{ item.status | statusLabel }}</span>
-    <span class="dot" aria-hidden="true">·</span>
-    <span class="id">{{ item.id }}</span>
-    {% if item.version_note %}
-      <span class="dot" aria-hidden="true">·</span>
-      <span class="version">{{ item.version_note }}</span>
-    {% endif %}
+    <span class="severity">{{ item.severity }}</span>
+    <span>{{ item.status | statusLabel }}</span>
+    <span>{{ item.id }}</span>
+    {% if item.version_note %}<span>{{ item.version_note }}</span>{% endif %}
   </p>
-
   {% if item.weekly_downloads or item.github_stars or item.github_forks %}
     <p class="stats">
-      {% if item.weekly_downloads %}
-        <span>{{ item.weekly_downloads | formatCount }} dl/week</span>
-      {% endif %}
-      {% if item.github_stars %}
-        <span>{{ item.github_stars | formatCount }}★</span>
-      {% endif %}
-      {% if item.github_forks %}
-        <span>{{ item.github_forks | formatCount }} forks</span>
-      {% endif %}
+      {% if item.weekly_downloads %}<span>{{ item.weekly_downloads | formatCount }} dl/week</span>{% endif %}
+      {% if item.github_stars %}<span>{{ item.github_stars | formatCount }} stars</span>{% endif %}
+      {% if item.github_forks %}<span>{{ item.github_forks | formatCount }} forks</span>{% endif %}
     </p>
   {% endif %}
-
   <p class="summary">{{ item.summary }}</p>
-
-  <footer class="card-foot">
+  <p class="card-foot">
     <time datetime="{{ item.date }}">{{ item.date }}</time>
-    <a class="action" href="{{ item.action_url }}">Open {{ "PR" if item.status == "pr-open" else "issue" if item.status == "needs-pr" else "advisory" }}</a>
-  </footer>
+    <a class="action" href="{{ item.action_url }}">{{ "Open PR" if item.status == "pr-open" else "Open issue" if item.status == "needs-pr" else "Open advisory" }}</a>
+  </p>
 </article>

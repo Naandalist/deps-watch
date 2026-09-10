@@ -9,27 +9,41 @@ permalink: index.html
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.title }} — daily JS dependency security board</title>
   <meta name="description" content="{{ site.tagline }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
 </head>
 <body>
-  <header class="hero">
-    <p class="eyebrow">Updated {{ site.updated }}</p>
-    <h1>{{ site.title }}</h1>
-    <p class="tagline">{{ site.tagline }}</p>
-    <p class="hint">Read-only board. Work happens on the linked GitHub issue or pull request.</p>
+  <header class="masthead">
+    <div class="masthead-left">
+      <p class="mark">Daily board</p>
+      <h1>{{ site.title }}</h1>
+    </div>
+    <div class="masthead-right">
+      <p class="edition">{{ site.updated }}</p>
+      <p class="tagline">{{ site.tagline }}</p>
+      <p class="hint">Read-only. Work happens on the linked issue or pull request.</p>
+    </div>
   </header>
 
   <section class="today" aria-labelledby="today-heading">
-    <div class="section-head">
+    <div class="rule-head">
       <h2 id="today-heading">Today</h2>
       <span class="count">{{ board.counts.today }}</span>
     </div>
     {% if board.today.length %}
-      <div class="today-grid">
+      <ol class="today-list">
         {% for item in board.today %}
-          {% include "card.njk" %}
+          <li class="today-row severity-{{ item.severity | lower }}">
+            <span class="package">{{ item.package }}</span>
+            <span class="severity">{{ item.severity }}</span>
+            <span class="status">{{ item.status | statusLabel }}</span>
+            <span class="summary">{{ item.summary }}</span>
+            <a class="action" href="{{ item.action_url }}">Open</a>
+          </li>
         {% endfor %}
-      </div>
+      </ol>
     {% else %}
       <p class="empty">No status changes in this update cycle.</p>
     {% endif %}
@@ -37,11 +51,11 @@ permalink: index.html
 
   <section class="board" aria-label="Contribution board">
     <div class="column">
-      <div class="section-head">
+      <div class="rule-head">
         <h2>Ready to work</h2>
         <span class="count">{{ board.counts.ready }}</span>
       </div>
-      <p class="column-copy">No fix PR yet. These are the best places to contribute.</p>
+      <p class="column-copy">No fix PR yet.</p>
       {% if board.ready.length %}
         {% for item in board.ready %}
           {% include "card.njk" %}
@@ -52,11 +66,11 @@ permalink: index.html
     </div>
 
     <div class="column">
-      <div class="section-head">
+      <div class="rule-head">
         <h2>In progress</h2>
         <span class="count">{{ board.counts.progress }}</span>
       </div>
-      <p class="column-copy">A PR is open. Review, test, or help get it merged.</p>
+      <p class="column-copy">A PR is open.</p>
       {% if board.progress.length %}
         {% for item in board.progress %}
           {% include "card.njk" %}
@@ -67,11 +81,11 @@ permalink: index.html
     </div>
 
     <div class="column">
-      <div class="section-head">
+      <div class="rule-head">
         <h2>Recently resolved</h2>
         <span class="count">{{ board.counts.resolved }}</span>
       </div>
-      <p class="column-copy">Fixed or merged. These age off the board quickly.</p>
+      <p class="column-copy">Fixed or merged. Ages off quickly.</p>
       {% if board.resolved.length %}
         {% for item in board.resolved %}
           {% include "card.njk" %}
@@ -83,13 +97,8 @@ permalink: index.html
   </section>
 
   <footer class="site-foot">
-    <p>Download, star, and fork counts are snapshots from the last admin update, not live figures.</p>
-    <p>
-      Source data lives in
-      <a href="{{ site.repo }}/blob/main/src/_data/items.yaml">items.yaml</a>.
-      Site:
-      <a href="{{ site.repo }}">{{ site.repo }}</a>
-    </p>
+    <p>Download, star, and fork counts are snapshots from the last admin update.</p>
+    <p><a href="{{ site.repo }}/blob/main/src/_data/items.yaml">items.yaml</a> · <a href="{{ site.repo }}">source</a></p>
   </footer>
 </body>
 </html>
