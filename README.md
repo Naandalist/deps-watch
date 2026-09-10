@@ -10,11 +10,7 @@ Created by [Listiananda Apriliawan](https://naandalist.com).
 
 ## If you are an admin or an agent
 
-Read these in order:
-
-1. This README
-2. [`AGENTS.md`](./AGENTS.md) — operating brief, what to edit, what not to invent
-3. [`PLAN.md`](./PLAN.md) — locked product rules
+Read this README, then [`AGENTS.md`](./AGENTS.md) for the operating brief: what to edit, how to write Today, and what not to invent.
 
 Do not start by redesigning the site. The usual job is a daily content update.
 
