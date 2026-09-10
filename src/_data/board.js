@@ -24,9 +24,22 @@ const SEVERITY_RANK = {
   Medium: 1,
 };
 
+function toDayString(value) {
+  if (!value) return "";
+  if (value instanceof Date && !Number.isNaN(value.getTime())) {
+    return value.toISOString().slice(0, 10);
+  }
+  const text = String(value).trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) return text;
+  const parsed = new Date(text);
+  if (!Number.isNaN(parsed.getTime())) return parsed.toISOString().slice(0, 10);
+  return "";
+}
+
 function parseDate(value) {
-  if (!value) return null;
-  const date = new Date(`${value}T00:00:00Z`);
+  const day = toDayString(value);
+  if (!day) return null;
+  const date = new Date(`${day}T00:00:00Z`);
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
@@ -51,8 +64,12 @@ function takeQuota(items, limit) {
 
 export default function () {
   const site = JSON.parse(fs.readFileSync(path.join(__dirname, "site.json"), "utf8"));
-  const raw = yaml.load(fs.readFileSync(path.join(__dirname, "items.yaml"), "utf8")) || [];
+  const raw = (yaml.load(fs.readFileSync(path.join(__dirname, "items.yaml"), "utf8")) || []).map((item) => ({
+    ...item,
+    date: toDayString(item.date),
+  }));
   const updated = parseDate(site.updated) || new Date();
+  const updatedDay = toDayString(site.updated);
 
   const visible = raw.filter((item) => {
     const itemDate = parseDate(item.date);
@@ -62,9 +79,7 @@ export default function () {
     return daysBetween(updated, itemDate) <= maxAge;
   });
 
-  const today = visible
-    .filter((item) => item.date === site.updated)
-    .sort(compareItems);
+  const today = visible.filter((item) => item.date === updatedDay).sort(compareItems);
 
   const ready = takeQuota(
     visible.filter((item) => item.status === "needs-pr").sort(compareItems),
