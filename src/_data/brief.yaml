@@ -1,7 +1,7 @@
-headline: "sift now has an open Critical fix PR. node-forge still needs review at twenty million weekly downloads."
+headline: "OmniRoute joins Ready as a Critical with no patched release. sift and node-forge still need review, while next, astro, and maplibre-gl land in Resolved."
 paragraphs:
-  - "The big move today is sift. A contributor opened PR 277 for CVE-2026-85625, so that card leaves Ready to work and sits in In progress next to node-forge. Four smaller packages still need a first PR, and @typespec/openapi3 is now fixed on npm as 1.16.0."
-  - "If you can only do one thing, review sift PR 277 first. It is Critical, touches about 3.4 million weekly installs, and the patch is fresh. If you prefer sheer blast radius, node-forge PR 1152 is still open on a package with about 20 million weekly downloads."
+  - "Overnight GHSA traffic was heavy. next, astro, and maplibre-gl Critical advisories now have patched npm releases, so they move into Recently resolved with js-yaml and sharp. OmniRoute (CVE-2026-88062) is still listed as vulnerable through 3.8.50 with no first_patched_version, so it is a new Ready card. The four smaller needs-pr cards are unchanged, and sift plus node-forge stay In progress with open PRs."
+  - "If you can only do one thing, review sift PR 277. It is Critical, covers about 3.5 million weekly installs, and the patch is still waiting on maintainers. If you want maximum blast radius instead, node-forge PR 1152 remains open on roughly 20 million weekly downloads. For a from-scratch Critical, OmniRoute still needs a fix PR that actually ships a patched release."
 pick:
   label: "Worth doing today"
   package: sift

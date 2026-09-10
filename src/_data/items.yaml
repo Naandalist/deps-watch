@@ -1,3 +1,16 @@
+- package: omniroute
+  id: CVE-2026-88062
+  severity: Critical
+  status: needs-pr
+  date: "2026-09-11"
+  summary: Still unfixed through 3.8.50. GHSA has no patched release yet; a new fix PR is needed.
+  action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
+  version_note: <= 3.8.50
+  weekly_downloads: 38377
+  github_stars: 64173
+  github_forks: 8986
+  source: ghsa
+
 - package: "@builder.io/gpt-crawler"
   id: CVE-2026-82286
   severity: High
@@ -75,79 +88,67 @@
   github_forks: 863
   source: ghsa
 
-- package: "@typespec/openapi3"
-  id: GHSA-2q42-4q24-7rgv
-  severity: High
+- package: next
+  id: GHSA-2xp9-vwfh-vxw4
+  severity: Critical
   status: fixed
   date: "2026-09-11"
-  summary: Fix is published on npm for openapi3 and compiler. No further code change needed.
-  action_url: https://github.com/advisories/GHSA-2q42-4q24-7rgv
-  version_note: fixed 1.16.0
-  weekly_downloads: 117400
-  github_stars: 5851
-  github_forks: 392
+  summary: Patched releases are on npm for the Image Optimization AVIF RCE. Upgrade and move on.
+  action_url: https://github.com/advisories/GHSA-2xp9-vwfh-vxw4
+  version_note: fixed 15.5.24 / 16.3.3 (latest 16.3.4)
+  weekly_downloads: 32413652
+  github_stars: 142225
+  github_forks: 31905
   source: ghsa
 
-- package: smol-toml
-  id: GHSA-7w5x-hrqm-74c2
-  severity: High
+- package: astro
+  id: GHSA-26w7-cxv4-gfx2
+  severity: Critical
   status: fixed
   date: "2026-09-11"
-  summary: Fix is on npm. No further code change needed.
-  action_url: https://github.com/advisories/GHSA-7w5x-hrqm-74c2
-  version_note: fixed 1.7.1 (latest 1.8.0)
-  weekly_downloads: 18993068
-  github_stars: 306
-  github_forks: 21
+  summary: AVIF image-optimization RCE is patched on npm.
+  action_url: https://github.com/advisories/GHSA-26w7-cxv4-gfx2
+  version_note: fixed 7.2.8 (latest 7.3.2)
+  weekly_downloads: 3191434
+  github_stars: 62464
+  github_forks: 3788
   source: ghsa
 
-- package: nuxt-ollama
-  id: GHSA-fxg7-897c-57mp
-  severity: High
+- package: maplibre-gl
+  id: CVE-2026-85061
+  severity: Critical
   status: fixed
   date: "2026-09-11"
-  summary: Patched release is available.
-  action_url: https://github.com/advisories/GHSA-fxg7-897c-57mp
-  version_note: fixed 1.3.1 (latest 1.3.3)
-  weekly_downloads: 23
-  github_stars: 5
+  summary: XSS sanitizer bypass is fixed on npm.
+  action_url: https://github.com/advisories/GHSA-jrc7-96c5-q579
+  version_note: fixed 6.4.1 (latest 6.9.0)
+  weekly_downloads: 2752052
+  github_stars: 11606
+  github_forks: 1222
   source: ghsa
 
-- package: "@openhop/server"
-  id: GHSA-g72f-jw3w-mgh7
+- package: js-yaml
+  id: CVE-2026-84375
   severity: High
   status: fixed
   date: "2026-09-11"
-  summary: Advisory is fixed on npm.
-  action_url: https://github.com/advisories/GHSA-g72f-jw3w-mgh7
-  version_note: fixed 0.3.6
-  weekly_downloads: 16
-  github_stars: 43
-  github_forks: 2
+  summary: Empty-merge CPU issue is patched. Latest line is already past the fix.
+  action_url: https://github.com/advisories/GHSA-2883-xcg3-v3hh
+  version_note: fixed 4.3.2 / 3.15.2 (latest 5.4.1)
+  weekly_downloads: 159084340
+  github_stars: 6627
+  github_forks: 852
   source: ghsa
 
-- package: functype-mcp-server
-  id: GHSA-wcjj-9m6g-2fr2
+- package: sharp
+  id: GHSA-rgj7-g3m4-5g8c
   severity: High
   status: fixed
   date: "2026-09-11"
-  summary: Fix shipped. Newer latest versions are already past the patched release.
-  action_url: https://github.com/advisories/GHSA-wcjj-9m6g-2fr2
-  version_note: fixed 1.4.4 (latest 1.9.0)
-  weekly_downloads: 12
-  github_stars: 9
-  github_forks: 1
-  source: ghsa
-
-- package: "@yeger/turbo-graph"
-  id: GHSA-2r5q-h53f-9rp3
-  severity: High
-  status: fixed
-  date: "2026-09-11"
-  summary: Patched version is published.
-  action_url: https://github.com/advisories/GHSA-2r5q-h53f-9rp3
-  version_note: fixed 2.8.12
-  weekly_downloads: 1315
-  github_stars: 383
-  github_forks: 27
+  summary: libheif-related issues are addressed in the patched sharp release.
+  action_url: https://github.com/advisories/GHSA-rgj7-g3m4-5g8c
+  version_note: fixed 0.35.4
+  weekly_downloads: 55737361
+  github_stars: 32652
+  github_forks: 1435
   source: ghsa
