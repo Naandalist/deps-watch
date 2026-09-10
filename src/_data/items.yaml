@@ -2,118 +2,152 @@
   id: CVE-2026-82286
   severity: High
   status: needs-pr
-  date: 2026-09-10
-  summary: No fix PR yet. The issue is open and ready for a contributor.
+  date: 2026-09-11
+  summary: Unfixed and no fix PR. The issue is open if you want to take it.
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
+  weekly_downloads: 98
+  github_stars: 22399
+  github_forks: 2364
   source: snyk
 
 - package: "@alifd/next"
   id: CVE-2026-78180
   severity: High
   status: needs-pr
-  date: 2026-09-10
+  date: 2026-09-11
   summary: Unfixed and no fix PR. The tracking issue is waiting on a contributor.
   action_url: https://github.com/alibaba-fusion/next/issues/5101
   version_note: 1.27.34
+  weekly_downloads: 9676
+  github_stars: 4677
+  github_forks: 596
   source: snyk
 
 - package: "@cgauge/yaml"
   id: CVE-2026-76833
   severity: High
   status: needs-pr
-  date: 2026-09-10
+  date: 2026-09-11
   summary: Still unfixed. Start from the package repository if you want to open a PR.
   action_url: https://github.com/cgauge/packages
   version_note: 0.27.0
+  weekly_downloads: 4
+  github_stars: 3
   source: snyk
 
 - package: with-context-mcp
   id: CVE-2026-81491
   severity: High
   status: needs-pr
-  date: 2026-09-10
-  summary: No fix PR yet. The issue is open if you want to take it.
+  date: 2026-09-11
+  summary: No fix PR yet. The issue is open and ready for a contributor.
   action_url: https://github.com/boxpositron/with-context-mcp/issues/2
   version_note: 3.0.7
+  weekly_downloads: 27
+  github_stars: 48
+  github_forks: 5
   source: snyk
 
 - package: sift
   id: CVE-2026-85625
   severity: High
   status: needs-pr
-  date: 2026-09-10
+  date: 2026-09-11
   summary: Unfixed and no fix PR. The issue is the place to start.
   action_url: https://github.com/crcn/sift.js/issues/276
   version_note: 17.1.3
+  weekly_downloads: 3456820
+  github_stars: 1703
+  github_forks: 105
   source: snyk
 
 - package: node-forge
   id: CVE-2026-85393
   severity: High
   status: pr-open
-  date: 2026-09-10
-  summary: The previous PR was closed. A new fix PR is open and can use review.
+  date: 2026-09-11
+  summary: Previous PR was closed. A new fix PR is open and can use review.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
+  weekly_downloads: 20292277
+  github_stars: 5330
+  github_forks: 863
   source: ghsa
 
 - package: "@typespec/openapi3"
   id: GHSA-2q42-4q24-7rgv
   severity: High
   status: fixed-unreleased
-  date: 2026-09-09
-  summary: Fix is merged. Confirm the npm release includes both compiler packages.
+  date: 2026-09-11
+  summary: Fix is merged for openapi3 and compiler. npm latest is 1.16.0 for both.
   action_url: https://github.com/microsoft/typespec/pull/11777
   version_note: npm latest both 1.16.0
+  weekly_downloads: 117400
+  github_stars: 5851
+  github_forks: 392
   source: ghsa
 
 - package: smol-toml
   id: GHSA-7w5x-hrqm-74c2
   severity: High
   status: fixed
-  date: 2026-09-09
-  summary: Fix is on npm. Useful as a recently resolved watch item.
+  date: 2026-09-11
+  summary: Fix is on npm. No further code change needed.
   action_url: https://github.com/advisories/GHSA-7w5x-hrqm-74c2
   version_note: fixed 1.7.1 (latest 1.8.0)
+  weekly_downloads: 18993068
+  github_stars: 306
+  github_forks: 21
   source: ghsa
 
 - package: nuxt-ollama
   id: GHSA-fxg7-897c-57mp
   severity: High
   status: fixed
-  date: 2026-09-09
-  summary: Patched release is available. No further code change needed.
+  date: 2026-09-11
+  summary: Patched release is available.
   action_url: https://github.com/advisories/GHSA-fxg7-897c-57mp
   version_note: fixed 1.3.1 (latest 1.3.3)
+  weekly_downloads: 23
+  github_stars: 5
   source: ghsa
 
 - package: "@openhop/server"
   id: GHSA-g72f-jw3w-mgh7
   severity: High
   status: fixed
-  date: 2026-09-08
-  summary: Advisory is fixed on npm. Leaving this as a short resolved note.
+  date: 2026-09-11
+  summary: Advisory is fixed on npm.
   action_url: https://github.com/advisories/GHSA-g72f-jw3w-mgh7
   version_note: fixed 0.3.6
+  weekly_downloads: 16
+  github_stars: 43
+  github_forks: 2
   source: ghsa
 
 - package: functype-mcp-server
   id: GHSA-wcjj-9m6g-2fr2
   severity: High
   status: fixed
-  date: 2026-09-08
+  date: 2026-09-11
   summary: Fix shipped. Newer latest versions are already past the patched release.
   action_url: https://github.com/advisories/GHSA-wcjj-9m6g-2fr2
   version_note: fixed 1.4.4 (latest 1.9.0)
+  weekly_downloads: 12
+  github_stars: 9
+  github_forks: 1
   source: ghsa
 
 - package: "@yeger/turbo-graph"
   id: GHSA-2r5q-h53f-9rp3
   severity: High
   status: fixed
-  date: 2026-09-07
-  summary: Patched version is published. This card will age off the board soon.
+  date: 2026-09-11
+  summary: Patched version is published.
   action_url: https://github.com/advisories/GHSA-2r5q-h53f-9rp3
   version_note: fixed 2.8.12
+  weekly_downloads: 1315
+  github_stars: 383
+  github_forks: 27
   source: ghsa
