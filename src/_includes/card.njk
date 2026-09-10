@@ -1,21 +1,18 @@
-<article class="notice severity-{{ item.severity | lower }} status-{{ item.status }}">
-  <h3 class="package">{{ item.package }}</h3>
+<article class="pkg severity-{{ item.severity | lower }}">
+  <div class="pkg-top">
+    <h3 class="package">
+      <a href="{{ item.action_url }}">{{ item.package }}</a>
+    </h3>
+    <span class="badge">{{ item.severity }}</span>
+  </div>
+  <p class="summary">{{ item.summary }}</p>
   <p class="meta">
-    <span class="severity">{{ item.severity }}</span>
     <span>{{ item.status | statusLabel }}</span>
     <span>{{ item.id }}</span>
     {% if item.version_note %}<span>{{ item.version_note }}</span>{% endif %}
-  </p>
-  {% if item.weekly_downloads or item.github_stars or item.github_forks %}
-    <p class="stats">
-      {% if item.weekly_downloads %}<span>{{ item.weekly_downloads | formatCount }} dl/week</span>{% endif %}
-      {% if item.github_stars %}<span>{{ item.github_stars | formatCount }} stars</span>{% endif %}
-      {% if item.github_forks %}<span>{{ item.github_forks | formatCount }} forks</span>{% endif %}
-    </p>
-  {% endif %}
-  <p class="summary">{{ item.summary }}</p>
-  <p class="card-foot">
+    {% if item.weekly_downloads %}<span>{{ item.weekly_downloads | formatCount }} weekly downloads</span>{% endif %}
+    {% if item.github_stars %}<span>{{ item.github_stars | formatCount }} stars</span>{% endif %}
+    {% if item.github_forks %}<span>{{ item.github_forks | formatCount }} forks</span>{% endif %}
     <time datetime="{{ item.date }}">{{ item.date }}</time>
-    <a class="action" href="{{ item.action_url }}">{{ "Open PR" if item.status == "pr-open" else "Open issue" if item.status == "needs-pr" else "Open advisory" }}</a>
   </p>
 </article>
