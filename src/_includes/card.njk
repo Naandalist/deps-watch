@@ -1,12 +1,8 @@
-<article class="pkg severity-{{ item.severity | lower }}">
-  <div class="pkg-top">
-    <h3 class="package">
-      <a href="{{ item.action_url }}">{{ item.package }}</a>
-    </h3>
-    <span class="badge">{{ item.severity }}</span>
-  </div>
+<article class="pkg">
+  <h3 class="package"><a href="{{ item.action_url }}">{{ item.package }}</a></h3>
   <p class="summary">{{ item.summary }}</p>
   <p class="meta">
+    <span>{{ item.severity }}</span>
     <span>{{ item.status | statusLabel }}</span>
     <span>{{ item.id }}</span>
     {% if item.version_note %}<span>{{ item.version_note }}</span>{% endif %}

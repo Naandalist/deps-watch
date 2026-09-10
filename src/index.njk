@@ -11,32 +11,26 @@ permalink: index.html
   <meta name="description" content="{{ site.tagline }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
 </head>
 <body>
+  <div class="npm-stripe" aria-hidden="true"></div>
+
   <header class="topbar">
-    <a class="brand" href="{{ '/' | url }}">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">deps-watch</span>
-    </a>
+    <a class="brand" href="{{ '/' | url }}">deps-watch</a>
     <p class="top-meta">Updated {{ site.updated }}</p>
   </header>
 
   <main class="page">
-    <section class="intro">
-      <h1>{{ site.title }}</h1>
-      <p class="tagline">{{ site.tagline }}</p>
-      <p class="hint">Read-only board. Work happens on the linked GitHub issue or pull request.</p>
-    </section>
-
-    <section class="today" aria-labelledby="today-heading">
-      <div class="section-head">
+    <section class="panel today" aria-labelledby="today-heading">
+      <div class="panel-head rule-red">
         <h2 id="today-heading">Today</h2>
         <span class="count">{{ board.counts.today }}</span>
       </div>
+      <p class="lede">{{ site.tagline }} Read-only; work happens on the linked issue or pull request.</p>
       {% if board.today.length %}
-        <ul class="result-list">
+        <ul class="pkg-list">
           {% for item in board.today %}
             <li>{% include "card.njk" %}</li>
           {% endfor %}
@@ -46,47 +40,50 @@ permalink: index.html
       {% endif %}
     </section>
 
-    <section class="board" aria-label="Contribution board">
+    <section class="panel board" aria-label="Contribution board">
       <div class="column">
-        <div class="section-head">
+        <div class="panel-head rule-red">
           <h2>Ready to work</h2>
           <span class="count">{{ board.counts.ready }}</span>
         </div>
-        <p class="column-copy">No fix PR yet. Best places to contribute.</p>
         {% if board.ready.length %}
-          {% for item in board.ready %}
-            {% include "card.njk" %}
-          {% endfor %}
+          <ul class="pkg-list">
+            {% for item in board.ready %}
+              <li>{% include "card.njk" %}</li>
+            {% endfor %}
+          </ul>
         {% else %}
           <p class="empty">Nothing waiting for a PR.</p>
         {% endif %}
       </div>
 
       <div class="column">
-        <div class="section-head">
+        <div class="panel-head rule-gold">
           <h2>In progress</h2>
           <span class="count">{{ board.counts.progress }}</span>
         </div>
-        <p class="column-copy">A PR is open. Review, test, or help merge it.</p>
         {% if board.progress.length %}
-          {% for item in board.progress %}
-            {% include "card.njk" %}
-          {% endfor %}
+          <ul class="pkg-list">
+            {% for item in board.progress %}
+              <li>{% include "card.njk" %}</li>
+            {% endfor %}
+          </ul>
         {% else %}
           <p class="empty">No open fix PRs on the board.</p>
         {% endif %}
       </div>
 
       <div class="column">
-        <div class="section-head">
+        <div class="panel-head rule-yellow">
           <h2>Recently resolved</h2>
           <span class="count">{{ board.counts.resolved }}</span>
         </div>
-        <p class="column-copy">Fixed or merged. These age off quickly.</p>
         {% if board.resolved.length %}
-          {% for item in board.resolved %}
-            {% include "card.njk" %}
-          {% endfor %}
+          <ul class="pkg-list">
+            {% for item in board.resolved %}
+              <li>{% include "card.njk" %}</li>
+            {% endfor %}
+          </ul>
         {% else %}
           <p class="empty">No recently resolved items.</p>
         {% endif %}
@@ -95,7 +92,7 @@ permalink: index.html
   </main>
 
   <footer class="site-foot">
-    <p>Download, star, and fork counts are snapshots from the last admin update, not live figures.</p>
+    <p>Download, star, and fork counts are snapshots from the last admin update.</p>
     <p><a href="{{ site.repo }}/blob/main/src/_data/items.yaml">items.yaml</a> · <a href="{{ site.repo }}">source</a></p>
   </footer>
 </body>
