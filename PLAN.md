@@ -1,27 +1,33 @@
 # Deps Watch plan
 
-Daily read-only board of JavaScript dependency security issues that people can help fix.
+Locked product decisions. Change these only when the owner asks.
 
-## Locked decisions
+## Product
+
+Deps Watch is a daily read-only board of JavaScript/npm security issues. The point is contribution insight, not a vulnerability database.
 
 - Brand: Deps Watch
-- URL: https://naandalist.github.io/deps-watch/
+- Wordmark: `deps-watch`
+- Live URL: https://naandalist.github.io/deps-watch/
+- Repo: https://github.com/Naandalist/deps-watch
 - Stack: Eleventy 3
-- Hosting: GitHub Pages via GitHub Actions
+- Host: GitHub Pages via GitHub Actions
 - Language: English
 - One page, no detail pages
-- Visitors cannot edit the board
-- Admin updates `src/_data/items.yaml` and `src/_data/site.json`
+- Visitors cannot edit anything
+- Visual tone: light, npm-homepage-like. Gray canvas, white panels, red section rules. No dark gradient, no npm trademark mark
 
 ## Page layout
 
-1. Header
-2. Today: items whose `date` matches `site.updated`
+1. Header with wordmark and `updated` date
+2. Today: editorial brief from `src/_data/brief.yaml`
 3. Kanban
-   - Ready to work (`needs-pr`)
-   - In progress (`pr-open`)
-   - Recently resolved (`fixed-unreleased`, `fixed`)
-4. Footer snapshot note
+   - 🚨 Ready to work (`needs-pr`)
+   - 🔧 In progress (`pr-open`)
+   - ✅ Recently resolved (`fixed-unreleased`, `fixed`)
+4. Footer: snapshot note, source links, credit to Listiananda Apriliawan → https://naandalist.com
+
+Today must not repeat the kanban as a card list.
 
 ## Item schema
 
@@ -33,9 +39,11 @@ Allowed values:
 - severity: `Critical` | `High` | `Medium`
 - status: `needs-pr` | `pr-open` | `fixed-unreleased` | `fixed`
 - source: `snyk` | `ghsa` | `manual`
-- date: `YYYY-MM-DD`
+- date: quoted `YYYY-MM-DD`
 
-One package + one id = one card. Update the existing card when status changes.
+One package + one id = one card. Status change updates the same card.
+
+`action_url` is the open PR when a PR exists. CVE/GHSA text links to Snyk search.
 
 ## Board rules
 
@@ -54,14 +62,15 @@ Front-page quotas:
 
 Overflow drop order: lower severity, then lower weekly downloads, then older date.
 
-Today is rebuilt every update cycle. Open work stays until it is resolved, expires, or is pushed off by quota.
+## Daily ritual
 
-## Daily admin ritual
+Around 06:00 Asia/Jakarta:
 
-1. Edit findings in `src/_data/items.yaml`
-2. Set `updated` in `src/_data/site.json`
-3. Commit and push around 06:00
+1. Update `src/_data/items.yaml`
+2. Rewrite `src/_data/brief.yaml`
+3. Set `src/_data/site.json` `updated`
+4. Push `main`
 
 ## Out of scope for phase 1
 
-js.org, pagination, detail pages, archive, live npm/GitHub stats, visitor accounts, Snyk API automation.
+`js.org`, pagination, detail pages, archive, live npm/GitHub widgets, visitor accounts, Snyk API automation.

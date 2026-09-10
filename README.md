@@ -1,18 +1,31 @@
 # Deps Watch
 
-A daily board of JavaScript dependency security issues you can help fix.
+A read-only daily board of JavaScript dependency security issues that people can help fix.
 
-Live site: [naandalist.github.io/deps-watch](https://naandalist.github.io/deps-watch/)
+Live site: [https://naandalist.github.io/deps-watch/](https://naandalist.github.io/deps-watch/)
 
-This is a read-only bulletin. Contributors work on the linked GitHub issue or pull request. Only an admin updates the board, by committing data to this repository.
+Visitors only read the board. Work happens on the linked GitHub issue or pull request. An admin, or an agent acting as admin, updates this repository and GitHub Pages rebuilds the site.
 
-## Update the board
+Created by [Listiananda Apriliawan](https://naandalist.com).
 
-1. Edit `src/_data/items.yaml`
-2. Set `updated` in `src/_data/site.json` to today's date (`YYYY-MM-DD`)
-3. Commit and push to `main`
+## If you are an admin or an agent
 
-The GitHub Action rebuilds the static site. Board grouping, age, and column quotas are applied at build time.
+Read these in order:
+
+1. This README
+2. [`AGENTS.md`](./AGENTS.md) — operating brief, what to edit, what not to invent
+3. [`PLAN.md`](./PLAN.md) — locked product rules
+
+Do not start by redesigning the site. The usual job is a daily content update.
+
+## Daily update
+
+1. Edit cards in `src/_data/items.yaml`
+2. Rewrite the morning brief in `src/_data/brief.yaml`
+3. Set `updated` in `src/_data/site.json` to today, `YYYY-MM-DD`
+4. Commit and push to `main`
+
+The Action in `.github/workflows/deploy.yml` builds Eleventy and deploys GitHub Pages.
 
 ## Local development
 
@@ -21,21 +34,19 @@ npm install
 npm start
 ```
 
-Production-style GitHub Pages build:
+GitHub Pages build:
 
 ```bash
 npm run build:ghpages
 ```
 
-## Project layout
+## What each data file is for
 
-```
-src/_data/items.yaml   # source of truth for cards
-src/_data/site.json    # site title, URL, update date
-src/_data/board.js     # board rules
-src/index.njk          # single page
-src/_includes/card.njk
-src/assets/style.css
-```
+| File | Role |
+| --- | --- |
+| `src/_data/items.yaml` | Cards on the kanban |
+| `src/_data/brief.yaml` | Today section: summary, opinion, one recommended action |
+| `src/_data/site.json` | Site title, live URL, `updated` date |
+| `src/_data/board.js` | Age, quota, and column rules. Do not edit unless the rules change |
 
-See `PLAN.md` for the locked product rules.
+The Today section is **not** a list of cards. Cards belong on the kanban only.
