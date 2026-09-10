@@ -3,8 +3,14 @@
   <p class="summary">{{ item.summary }}</p>
   <p class="meta">
     <span>{{ item.severity }}</span>
-    <span>{{ item.status | statusLabel }}</span>
-    <span>{{ item.id }}</span>
+    <span>
+      {% if item.status == "pr-open" %}
+        <a href="{{ item.action_url }}">PR open</a>
+      {% else %}
+        {{ item.status | statusLabel }}
+      {% endif %}
+    </span>
+    <span><a href="{{ item.id | snykUrl }}" rel="noreferrer">{{ item.id }}</a></span>
     {% if item.version_note %}<span>{{ item.version_note }}</span>{% endif %}
     {% if item.weekly_downloads %}<span>{{ item.weekly_downloads | formatCount }} weekly downloads</span>{% endif %}
     {% if item.github_stars %}<span>{{ item.github_stars | formatCount }} stars</span>{% endif %}

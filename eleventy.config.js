@@ -20,6 +20,11 @@ export default function (eleventyConfig) {
     }[status] || status;
   });
 
+  eleventyConfig.addFilter("snykUrl", (id) => {
+    if (!id) return "https://security.snyk.io";
+    return `https://security.snyk.io/vuln/?search=${encodeURIComponent(id)}`;
+  });
+
   return {
     dir: {
       input: "src",
