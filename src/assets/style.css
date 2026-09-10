@@ -86,7 +86,6 @@ h2 {
 }
 
 .count,
-.lede,
 .empty,
 .meta,
 .site-foot {
@@ -95,31 +94,46 @@ h2 {
 
 .count { font-size: 13px; }
 
-.lede {
-  margin: 10px 0 6px;
-  font-size: 14px;
-  line-height: 1.45;
+.brief-title {
+  margin: 12px 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
-.today-more {
+.brief-copy {
   margin: 0 0 10px;
-  border-top: 1px solid var(--line);
+  max-width: 72ch;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
 }
 
-.today-more summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 10px 0;
-  color: var(--red);
-  font-size: 14px;
-  font-weight: 600;
+.brief-pick {
+  margin: 6px 0 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--red);
+  background: #fafafa;
 }
 
-.today-more summary::-webkit-details-marker { display: none; }
-.today-more summary::before { content: "+ "; }
-.today-more[open] summary::before { content: "\2212 "; }
-.today-more[open] .when-closed { display: none; }
-.today-more:not([open]) .when-open { display: none; }
+.brief-pick-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.brief-pick-pkg {
+  margin: 4px 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.brief-pick-pkg a { color: var(--red); }
 
 .board {
   display: grid;
@@ -161,6 +175,8 @@ h2 {
   font-size: 13px;
   line-height: 1.4;
 }
+
+.meta a { text-decoration: underline; text-underline-offset: 2px; }
 
 .meta span + span::before,
 .meta time::before {

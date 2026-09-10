@@ -1,0 +1,10 @@
+headline: Five packages still need a first PR. One high-traffic fix is already in review.
+paragraphs:
+  - The board is split in a useful way today. Ready to work is where new contributors should look. In progress is only node-forge, but that one package is downloaded about 20 million times a week, so review there beats opening a low-traffic issue.
+  - If you want to write a patch instead of reviewing one, start with sift. It is unfixed, has no fix PR, and still sees millions of weekly installs. The smaller MCP and crawler packages are easier to approach, but they move fewer apps.
+pick:
+  label: Worth doing today
+  package: node-forge
+  action_label: Review the open PR
+  action_url: https://github.com/digitalbazaar/forge/pull/1152
+  approach: Read PR 1152 first. Check whether it actually replaces the closed PR 1151, then add a review or a failing test if the patch is incomplete. That is higher leverage than starting a brand-new advisory from scratch.
