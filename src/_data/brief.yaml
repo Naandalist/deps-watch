@@ -1,10 +1,10 @@
-headline: Five packages still need a first PR. One high-traffic fix is already in review.
+headline: sift now has an open Critical fix PR. node-forge still needs review at twenty million weekly downloads.
 paragraphs:
-  - The board is split in a useful way today. Ready to work is where new contributors should look. In progress is only node-forge, but that one package is downloaded about 20 million times a week, so review there beats opening a low-traffic issue.
-  - If you want to write a patch instead of reviewing one, start with sift. It is unfixed, has no fix PR, and still sees millions of weekly installs. The smaller MCP and crawler packages are easier to approach, but they move fewer apps.
+  - The big move today is sift. A contributor opened PR 277 for CVE-2026-85625, so that card leaves Ready to work and sits in In progress next to node-forge. Four smaller packages still need a first PR, and @typespec/openapi3 is now fixed on npm as 1.16.0.
+  - If you can only do one thing, review sift PR 277 first. It is Critical, touches about 3.4 million weekly installs, and the patch is fresh. If you prefer sheer blast radius, node-forge PR 1152 is still open on a package with about 20 million weekly downloads.
 pick:
   label: Worth doing today
-  package: node-forge
+  package: sift
   action_label: Review the open PR
-  action_url: https://github.com/digitalbazaar/forge/pull/1152
-  approach: Read PR 1152 first. Check whether it actually replaces the closed PR 1151, then add a review or a failing test if the patch is incomplete. That is higher leverage than starting a brand-new advisory from scratch.
+  action_url: https://github.com/crcn/sift.js/pull/277
+  approach: Read PR 277 against issue 276. Confirm the own-property guards cover both enumeration loops, then leave a review or a failing test if anything still slips through.
