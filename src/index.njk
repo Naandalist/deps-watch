@@ -25,7 +25,7 @@ permalink: index.html
   <main class="page">
     <section class="panel today" aria-labelledby="today-heading">
       <div class="panel-head rule-red">
-        <h2 id="today-heading">Today</h2>
+        <h2 id="today-heading">📅 Today</h2>
         <span class="count">{{ board.counts.today }}</span>
       </div>
       <p class="lede">{{ site.tagline }} Read-only; work happens on the linked issue or pull request.</p>
@@ -60,7 +60,7 @@ permalink: index.html
     <section class="panel board" aria-label="Contribution board">
       <div class="column">
         <div class="panel-head rule-red">
-          <h2>Ready to work</h2>
+          <h2>🚨 Ready to work</h2>
           <span class="count">{{ board.counts.ready }}</span>
         </div>
         {% if board.ready.length %}
@@ -76,7 +76,7 @@ permalink: index.html
 
       <div class="column">
         <div class="panel-head rule-gold">
-          <h2>In progress</h2>
+          <h2>🔧 In progress</h2>
           <span class="count">{{ board.counts.progress }}</span>
         </div>
         {% if board.progress.length %}
@@ -92,7 +92,7 @@ permalink: index.html
 
       <div class="column">
         <div class="panel-head rule-yellow">
-          <h2>Recently resolved</h2>
+          <h2>✅ Recently resolved</h2>
           <span class="count">{{ board.counts.resolved }}</span>
         </div>
         {% if board.resolved.length %}
