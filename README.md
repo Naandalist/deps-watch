@@ -46,3 +46,7 @@ npm run build:ghpages
 | `src/_data/board.js` | Age, quota, and column rules. Do not edit unless the rules change |
 
 The Today section is **not** a list of cards. Cards belong on the kanban only.
+
+## License
+
+[MIT](./LICENSE) © 2026 Listiananda Apriliawan
