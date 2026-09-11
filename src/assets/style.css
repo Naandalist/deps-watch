@@ -94,17 +94,22 @@ h2 {
 
 .count { font-size: 13px; }
 
+.today {
+  width: 100%;
+}
+
 .brief-title {
   margin: 12px 0 8px;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.25;
+  max-width: none;
 }
 
 .brief-copy {
   margin: 0 0 10px;
-  max-width: 72ch;
+  max-width: none;
   font-size: 15px;
   line-height: 1.5;
   color: #333;
@@ -116,6 +121,8 @@ h2 {
   border: 1px solid var(--line);
   border-left: 3px solid var(--red);
   background: #fafafa;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .brief-pick-label {
