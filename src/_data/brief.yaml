@@ -1,10 +1,10 @@
-headline: "Make-up refresh: Critical decompress joins the open-PR queue, while OmniRoute still needs a first patched release."
+headline: "Sunday refresh: open fix PRs still need review, while OmniRoute remains without a first patched release."
 paragraphs:
-  - "Re-verified the whole board for 2026-09-12. Ready cards still hold: OmniRoute remains Critical through 3.8.50 with no first_patched_version on GHSA-hf57, and the four smaller needs-pr cards are unchanged. In progress grows with two newly confirmed High/Critical items that already have fix PRs: decompress (path slip, still 4.2.1) and expr-eval (function injection, still 2.0.2). sift and node-forge stay open for review. Recently resolved next/astro/maplibre-gl/js-yaml/sharp are still patched on npm."
-  - "If you can only do one thing, review sift PR 277. It is Critical on about 4.7 million weekly installs and still waiting on maintainers. For wider blast radius, node-forge PR 1152 covers roughly 27 million weekly downloads. For a newly surfaced Critical archive issue, decompress PR 112 needs eyes too. For a from-scratch Critical, OmniRoute still needs a fix that ships past 3.8.50."
+  - "Re-verified the board for 2026-09-13. Ready still leads with Critical OmniRoute through 3.8.50 (GHSA-hf57 has no first_patched_version), plus the four smaller needs-pr cards. In progress is unchanged: sift, decompress, node-forge, and expr-eval all still have open fix PRs and npm has not moved. Recently resolved next/astro/maplibre-gl/js-yaml/sharp stay patched; smol-toml, nodemailer, and multer join as newly confirmed High fixes on npm."
+  - "If you can only do one thing, review node-forge PR 1152. It covers about 27 million weekly installs and still waits on maintainers after the incomplete CVE-2026-33894 fix. For a Critical open PR, sift PR 277 (~4.8M weekly) and decompress PR 112 (~2.5M weekly) also need eyes. For a from-scratch Critical, OmniRoute still needs a fix that ships past 3.8.50."
 pick:
   label: "Worth doing today"
-  package: sift
+  package: node-forge
   action_label: "Review the open PR"
-  action_url: "https://github.com/crcn/sift.js/pull/277"
-  approach: "Read PR 277 against issue 276. Confirm the own-property guards cover both enumeration loops, then leave a review or a failing test if anything still slips through."
+  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
+  approach: "Read PR 1152 against issue 1149. Confirm the nested DigestAlgorithm SEQUENCE length check rejects garbage children, then leave a review or a failing test if anything still verifies forged EM."
