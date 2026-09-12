@@ -2,13 +2,13 @@
   id: CVE-2026-88062
   severity: Critical
   status: needs-pr
-  date: "2026-09-11"
-  summary: Still unfixed through 3.8.50. GHSA has no patched release yet; a new fix PR is needed.
+  date: "2026-09-12"
+  summary: Still unfixed through 3.8.50. Prior security merges did not clear GHSA-hf57; a new fix PR and patched release are still needed.
   action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
   version_note: <= 3.8.50
   weekly_downloads: 48700
-  github_stars: 64854
-  github_forks: 9067
+  github_stars: 64923
+  github_forks: 9076
   source: ghsa
 
 - package: "@builder.io/gpt-crawler"
@@ -20,7 +20,7 @@
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 105
-  github_stars: 22400
+  github_stars: 22399
   github_forks: 2364
   source: snyk
 
@@ -88,6 +88,32 @@
   github_forks: 863
   source: ghsa
 
+- package: decompress
+  id: CVE-2026-53486
+  severity: Critical
+  status: pr-open
+  date: "2026-09-12"
+  summary: Path-traversal / slip remains unfixed on npm 4.2.1. An open fix PR needs review and a release.
+  action_url: https://github.com/kevva/decompress/pull/112
+  version_note: still 4.2.1
+  weekly_downloads: 2537994
+  github_stars: 419
+  github_forks: 55
+  source: ghsa
+
+- package: expr-eval
+  id: CVE-2025-12735
+  severity: High
+  status: pr-open
+  date: "2026-09-12"
+  summary: Function-injection issue is still unpatched on npm. An open security PR can use review.
+  action_url: https://github.com/silentmatt/expr-eval/pull/288
+  version_note: still 2.0.2
+  weekly_downloads: 377218
+  github_stars: 1352
+  github_forks: 269
+  source: ghsa
+
 - package: next
   id: GHSA-2xp9-vwfh-vxw4
   severity: Critical
@@ -98,7 +124,7 @@
   version_note: fixed 15.5.24 / 16.3.3 (latest 16.3.5)
   weekly_downloads: 42821688
   github_stars: 142243
-  github_forks: 31903
+  github_forks: 31904
   source: ghsa
 
 - package: astro
@@ -110,7 +136,7 @@
   action_url: https://github.com/advisories/GHSA-26w7-cxv4-gfx2
   version_note: fixed 7.2.8 (latest 7.3.2)
   weekly_downloads: 4190544
-  github_stars: 62481
+  github_stars: 62483
   github_forks: 3787
   source: ghsa
 
@@ -123,7 +149,7 @@
   action_url: https://github.com/advisories/GHSA-jrc7-96c5-q579
   version_note: fixed 6.4.1 (latest 6.9.0)
   weekly_downloads: 3721726
-  github_stars: 11617
+  github_stars: 11621
   github_forks: 1224
   source: ghsa
 

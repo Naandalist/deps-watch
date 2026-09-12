@@ -1,7 +1,7 @@
-headline: "Board is stable: OmniRoute still needs a Critical fix PR, while sift and node-forge keep waiting on review."
+headline: "Make-up refresh: Critical decompress joins the open-PR queue, while OmniRoute still needs a first patched release."
 paragraphs:
-  - "Overnight GHSA traffic was mostly already-patched Highs (Angular SSR XSS/SSRF, smol-toml DoS, multer and nodemailer DoS), so they do not displace the Resolved column. Ready and In progress statuses are unchanged: OmniRoute is still vulnerable through 3.8.50 with no first_patched_version, the four smaller needs-pr cards remain open, and sift plus node-forge still have open fix PRs."
-  - "If you can only do one thing, review sift PR 277. It is Critical, covers about 4.7 million weekly installs, and maintainers still have not merged. For wider blast radius, node-forge PR 1152 is open on roughly 27 million weekly downloads. For a from-scratch Critical, OmniRoute still needs a fix PR that ships a patched release."
+  - "Re-verified the whole board for 2026-09-12. Ready cards still hold: OmniRoute remains Critical through 3.8.50 with no first_patched_version on GHSA-hf57, and the four smaller needs-pr cards are unchanged. In progress grows with two newly confirmed High/Critical items that already have fix PRs: decompress (path slip, still 4.2.1) and expr-eval (function injection, still 2.0.2). sift and node-forge stay open for review. Recently resolved next/astro/maplibre-gl/js-yaml/sharp are still patched on npm."
+  - "If you can only do one thing, review sift PR 277. It is Critical on about 4.7 million weekly installs and still waiting on maintainers. For wider blast radius, node-forge PR 1152 covers roughly 27 million weekly downloads. For a newly surfaced Critical archive issue, decompress PR 112 needs eyes too. For a from-scratch Critical, OmniRoute still needs a fix that ships past 3.8.50."
 pick:
   label: "Worth doing today"
   package: sift
