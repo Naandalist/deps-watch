@@ -1,10 +1,10 @@
-headline: "Monday refresh: sift has fresh fix activity; OmniRoute still needs its first patched release."
+headline: "Wednesday board: OmniRoute still needs a patched release; review load is highest on node-forge and sift."
 paragraphs:
-  - "Re-verified the board for 2026-09-15. Critical OmniRoute remains unfixed through 3.8.50, while gpt-crawler, @alifd/next, @cgauge/yaml, and with-context-mcp still need first contributions. sift, node-forge, decompress, and expr-eval keep open fix PRs; sift PR 277 had new activity today. Recent fixes remain available for next, astro, maplibre-gl, js-yaml, and sharp."
-  - "Review work has biggest immediate reach: node-forge PR 1152 covers about 27.7 million weekly installs. sift PR 277 is Critical, recently updated, and reaches about 4.8 million weekly installs; decompress PR 112 reaches about 2.5 million. OmniRoute remains best from-scratch Critical task because no patched npm release exists."
+  - "Re-verified the board for 2026-09-16. Critical OmniRoute remains unfixed through 3.8.50. gpt-crawler, @alifd/next, @cgauge/yaml, and with-context-mcp still need first contributions. Open fix PRs stay active for sift, node-forge, decompress, and expr-eval. Aged resolved cards rolled off; newly disclosed @zereight/mcp-gitlab Critical SSRF fixes are on npm."
+  - "Review work still has the biggest reach: node-forge PR 1152 covers about 27.7 million weekly installs. sift PR 277 is Critical and reaches about 4.8 million; decompress PR 112 reaches about 2.5 million. OmniRoute remains the best from-scratch Critical task because no patched npm release exists."
 pick:
   label: "Worth doing today"
-  package: sift
+  package: node-forge
   action_label: "Review the open PR"
-  action_url: "https://github.com/crcn/sift.js/pull/277"
-  approach: "Read PR 277 for inherited-key handling in query operators. Check that its tests cover inherited enumerable keys without changing expected own-key queries, then leave a review or an additional regression test."
+  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
+  approach: "Read PR 1152 for the nested DigestAlgorithm forgery fix. Confirm the regression tests reject the crafted PKCS#1 v1.5 cases without breaking legitimate RSA verify paths, then leave a review."
