@@ -66,8 +66,8 @@
   id: CVE-2026-85625
   severity: Critical
   status: pr-open
-  date: "2026-09-11"
-  summary: A fix PR is open and can use review. npm latest is still 17.1.3.
+  date: "2026-09-15"
+  summary: The open fix PR received an update today and can use review. npm latest is still 17.1.3.
   action_url: https://github.com/crcn/sift.js/pull/277
   version_note: still 17.1.3
   weekly_downloads: 4759024
