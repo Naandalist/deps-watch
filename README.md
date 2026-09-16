@@ -18,7 +18,7 @@ Do not start by redesigning the site. The usual job is a daily content update.
 
 1. Edit cards in `src/_data/items.yaml`
 2. Rewrite the morning brief in `src/_data/brief.yaml`
-3. Set `updated` in `src/_data/site.json` to today, `YYYY-MM-DD`
+3. Set `updated` in `src/_data/site.json` to today (`YYYY-MM-DD`) and `updated_at` to the exact Asia/Jakarta time (e.g. `2026-09-17 05:24 WIB`)
 4. Commit and push to `main`
 
 The Action in `.github/workflows/deploy.yml` builds Eleventy and deploys GitHub Pages.

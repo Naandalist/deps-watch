@@ -12,7 +12,7 @@ Unless the human asks for a design or code change, assume the task is a **daily 
 
 1. Refresh `src/_data/items.yaml`
 2. Rewrite `src/_data/brief.yaml` from the new board state
-3. Set `src/_data/site.json` → `updated` to today's date
+3. Set `src/_data/site.json` → `updated` to today's date (YYYY-MM-DD) and `updated_at` to the exact Asia/Jakarta timestamp of this run
 4. Push `main` and check the live page
 
 Do not create extra pages, filters, accounts, or APIs.
@@ -21,7 +21,7 @@ Do not create extra pages, filters, accounts, or APIs.
 
 - `src/_data/items.yaml`
 - `src/_data/brief.yaml`
-- `src/_data/site.json` (`updated` only, unless the human asks otherwise)
+- `src/_data/site.json` (`updated` as YYYY-MM-DD for board age math, and `updated_at` as exact local timestamp e.g. `2026-09-17 05:24 WIB`, unless the human asks otherwise)
 
 Leave templates, CSS, `board.js`, and the workflow alone unless the human asked for a product change.
 

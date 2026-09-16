@@ -19,7 +19,7 @@ permalink: index.html
 
   <header class="topbar">
     <a class="brand" href="{{ '/' | url }}">deps-watch</a>
-    <p class="top-meta">Updated {{ site.updated }}</p>
+    <p class="top-meta">Updated {{ site.updated_at | default(site.updated) }}</p>
   </header>
 
   <main class="page">
