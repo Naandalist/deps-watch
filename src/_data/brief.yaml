@@ -1,10 +1,10 @@
-headline: "Thursday board: Critical OmniRoute still needs a patched release; sift and node-forge open PRs carry the most review load."
+headline: "Friday board: OmniRoute still needs a patched release; node-forge and sift open PRs carry the review load; Vendure and vm2 Criticals land in Resolved."
 paragraphs:
-  - "Re-verified the board for 2026-09-17. OmniRoute remains Critical and unfixed through 3.8.50. gpt-crawler, @alifd/next, @cgauge/yaml, and with-context-mcp still need first contributions. Open fix PRs stay active for sift, node-forge, decompress, and expr-eval. Newly disclosed @nuxtjs/mdc High XSS is already patched on npm; @zereight/mcp-gitlab Critical fixes remain on the resolved column."
-  - "Review work still has the biggest reach: node-forge PR 1152 covers about 27.7 million weekly installs. sift PR 277 is Critical and reaches about 4.8 million; decompress PR 112 reaches about 2.5 million. OmniRoute remains the best from-scratch Critical task because no patched npm release exists."
+  - "Re-verified for 2026-09-18. OmniRoute remains Critical and unfixed through 3.8.50. gpt-crawler still needs a first contribution. @alifd/next moved to In progress with open PR 5115. Open fix PRs stay active for sift, decompress, node-forge, and expr-eval. Low-star Ready cards (@cgauge/yaml, with-context-mcp) were dropped. Newly disclosed @vendure/core and vm2 Critical fixes, plus @libp2p/peer-store, exifreader, and @nuxtjs/mdc High fixes, fill Recently resolved."
+  - "Review work still has the biggest reach: node-forge PR 1152 covers about 27.7 million weekly installs. sift PR 277 is Critical and reaches about 5.8 million; decompress PR 112 reaches about 3.2 million. OmniRoute remains the best from-scratch Critical task because no patched npm release exists."
 pick:
   label: "Worth doing today"
-  package: sift
+  package: node-forge
   action_label: "Review the open PR"
-  action_url: "https://github.com/crcn/sift.js/pull/277"
-  approach: "Read PR 277 for the inherited-key enumeration fix. Confirm operator lookup no longer walks the prototype chain, check the regression tests for $where and polluted Object.prototype cases, then leave a review."
+  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
+  approach: "Read PR 1152 for the nested DigestAlgorithm length check. Confirm forged PKCS#1 v1.5 signatures with garbage ASN.1 children are rejected, skim the regression tests, then leave a review."
