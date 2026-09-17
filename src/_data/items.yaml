@@ -7,8 +7,8 @@
   action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
   version_note: <= 3.8.50
   weekly_downloads: 57807
-  github_stars: 67454
-  github_forks: 9497
+  github_stars: 67020
+  github_forks: 9417
   source: ghsa
 
 - package: "@builder.io/gpt-crawler"
@@ -16,12 +16,50 @@
   severity: High
   status: needs-pr
   date: "2026-09-11"
-  summary: Unfixed and no fix PR. The tracking issue is open if you want to take it.
+  summary: Unfixed and no fix PR. The issue is open if you want to take it.
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 43
-  github_stars: 22397
+  github_stars: 22398
   github_forks: 2364
+  source: snyk
+
+- package: "@alifd/next"
+  id: CVE-2026-78180
+  severity: Medium
+  status: needs-pr
+  date: "2026-09-11"
+  summary: Still unfixed and no fix PR. The tracking issue was auto-closed as stale; a new PR is still needed.
+  action_url: https://github.com/alibaba-fusion/next/issues/5101
+  version_note: 1.27.34
+  weekly_downloads: 20935
+  github_stars: 4679
+  github_forks: 596
+  source: snyk
+
+- package: "@cgauge/yaml"
+  id: CVE-2026-76833
+  severity: High
+  status: needs-pr
+  date: "2026-09-11"
+  summary: Still unfixed. Start from the package repository if you want to open a PR.
+  action_url: https://github.com/cgauge/packages
+  version_note: 0.27.0
+  weekly_downloads: 59
+  github_stars: 3
+  source: snyk
+
+- package: with-context-mcp
+  id: CVE-2026-81491
+  severity: Medium
+  status: needs-pr
+  date: "2026-09-11"
+  summary: No fix PR yet. The issue is open and ready for a contributor.
+  action_url: https://github.com/boxpositron/with-context-mcp/issues/2
+  version_note: 3.0.7
+  weekly_downloads: 38
+  github_stars: 48
+  github_forks: 5
   source: snyk
 
 - package: sift
@@ -34,21 +72,8 @@
   version_note: still 17.1.3
   weekly_downloads: 5847550
   github_stars: 1702
-  github_forks: 106
+  github_forks: 105
   source: snyk
-
-- package: decompress
-  id: CVE-2026-53486
-  severity: Critical
-  status: pr-open
-  date: "2026-09-12"
-  summary: Path-traversal / slip remains unfixed on npm 4.2.1. An open fix PR needs review and a release.
-  action_url: https://github.com/kevva/decompress/pull/112
-  version_note: still 4.2.1
-  weekly_downloads: 3187457
-  github_stars: 419
-  github_forks: 55
-  source: ghsa
 
 - package: node-forge
   id: CVE-2026-85393
@@ -61,6 +86,19 @@
   weekly_downloads: 27702351
   github_stars: 5332
   github_forks: 862
+  source: ghsa
+
+- package: decompress
+  id: CVE-2026-53486
+  severity: Critical
+  status: pr-open
+  date: "2026-09-12"
+  summary: Path-traversal / slip remains unfixed on npm 4.2.1. An open fix PR needs review and a release.
+  action_url: https://github.com/kevva/decompress/pull/112
+  version_note: still 4.2.1
+  weekly_downloads: 3187457
+  github_stars: 419
+  github_forks: 55
   source: ghsa
 
 - package: expr-eval
@@ -76,69 +114,17 @@
   github_forks: 269
   source: ghsa
 
-- package: "@alifd/next"
-  id: CVE-2026-78180
-  severity: Medium
-  status: pr-open
-  date: "2026-09-17"
-  summary: Tracking issue went stale; a new fix PR for ConfigProvider deepMerge prototype pollution is open and needs review.
-  action_url: https://github.com/alibaba-fusion/next/pull/5115
-  version_note: still 1.27.34
-  weekly_downloads: 20935
-  github_stars: 4680
-  github_forks: 597
-  source: snyk
-
-- package: "@vendure/core"
-  id: CVE-2026-63472
+- package: "@zereight/mcp-gitlab"
+  id: GHSA-2h44-8472-frjj
   severity: Critical
   status: fixed
-  date: "2026-09-17"
-  summary: External-authentication account takeover is patched on npm. Upgrade to 3.7.0 or later.
-  action_url: https://github.com/advisories/GHSA-6j36-r6pr-59x4
-  version_note: fixed 3.7.0 (latest 3.7.3)
-  weekly_downloads: 28689
-  github_stars: 8447
-  github_forks: 1490
-  source: ghsa
-
-- package: vm2
-  id: CVE-2026-92935
-  severity: Critical
-  status: fixed
-  date: "2026-09-17"
-  summary: NodeVM nesting guard array-shaped require RCE is patched on npm. Upgrade to 3.11.7 or later.
-  action_url: https://github.com/advisories/GHSA-9fxx-mv6c-j5xp
-  version_note: fixed 3.11.7 (latest 3.12.2)
-  weekly_downloads: 1006359
-  github_stars: 4101
-  github_forks: 328
-  source: ghsa
-
-- package: "@libp2p/peer-store"
-  id: CVE-2026-86039
-  severity: High
-  status: fixed
-  date: "2026-09-17"
-  summary: PeerStore accepted attacker-signed PeerRecords for a victim peer ID. Upgrade to 12.0.24 or later.
-  action_url: https://github.com/advisories/GHSA-vrf4-mx87-p53w
-  version_note: fixed 12.0.24 (latest 12.0.28)
-  weekly_downloads: 87848
-  github_stars: 2577
-  github_forks: 546
-  source: ghsa
-
-- package: exifreader
-  id: CVE-2026-85715
-  severity: High
-  status: fixed
-  date: "2026-09-17"
-  summary: DoS via crafted HEIC/AVIF iloc box memory exhaustion is patched on npm. Upgrade to 4.41.1 or later.
-  action_url: https://github.com/advisories/GHSA-pj96-35fp-cfcc
-  version_note: fixed 4.41.1 (latest 4.45.0)
-  weekly_downloads: 224497
-  github_stars: 997
-  github_forks: 106
+  date: "2026-09-15"
+  summary: SSRF and related MCP transport issues are patched on npm. Upgrade past 2.1.30.
+  action_url: https://github.com/advisories/GHSA-2h44-8472-frjj
+  version_note: fixed 2.1.27 / 2.1.30 (latest 2.1.63)
+  weekly_downloads: 82103
+  github_stars: 1979
+  github_forks: 357
   source: ghsa
 
 - package: "@nuxtjs/mdc"
@@ -151,5 +137,31 @@
   version_note: fixed 0.22.1 (latest 0.23.1)
   weekly_downloads: 207624
   github_stars: 400
-  github_forks: 49
+  github_forks: 48
+  source: ghsa
+
+- package: "@vendure/core"
+  id: CVE-2026-63472
+  severity: Critical
+  status: fixed
+  date: "2026-09-17"
+  summary: External-auth account takeover via unverified email linking is patched on npm. Upgrade to 3.7.0 or later.
+  action_url: https://github.com/advisories/GHSA-6j36-r6pr-59x4
+  version_note: fixed 3.7.0 (latest 3.7.3)
+  weekly_downloads: 28689
+  github_stars: 8447
+  github_forks: 1490
+  source: ghsa
+
+- package: exifreader
+  id: CVE-2026-85715
+  severity: High
+  status: fixed
+  date: "2026-09-17"
+  summary: DoS via crafted HEIC/AVIF iloc boxes is patched on npm. Upgrade to 4.41.1 or later.
+  action_url: https://github.com/advisories/GHSA-pj96-35fp-cfcc
+  version_note: fixed 4.41.1 (latest 4.45.0)
+  weekly_downloads: 224497
+  github_stars: 997
+  github_forks: 106
   source: ghsa

@@ -1,10 +1,10 @@
-headline: "Friday board: OmniRoute still needs a patched release; node-forge and sift open PRs carry the review load; Vendure and vm2 Criticals land in Resolved."
+headline: "Friday board: OmniRoute Critical still needs a patched release; new Vendure and ExifReader advisories landed already fixed."
 paragraphs:
-  - "Re-verified for 2026-09-18. OmniRoute remains Critical and unfixed through 3.8.50. gpt-crawler still needs a first contribution. @alifd/next moved to In progress with open PR 5115. Open fix PRs stay active for sift, decompress, node-forge, and expr-eval. Low-star Ready cards (@cgauge/yaml, with-context-mcp) were dropped. Newly disclosed @vendure/core and vm2 Critical fixes, plus @libp2p/peer-store, exifreader, and @nuxtjs/mdc High fixes, fill Recently resolved."
+  - "Re-verified the board for 2026-09-18. OmniRoute remains Critical and unfixed through 3.8.50. gpt-crawler, @alifd/next, @cgauge/yaml, and with-context-mcp still need first contributions. Open fix PRs stay active for sift, node-forge, decompress, and expr-eval. Newly reviewed Critical @vendure/core account-takeover (CVE-2026-63472) and High exifreader DoS (CVE-2026-85715) are already patched on npm; @nuxtjs/mdc stays on the resolved column."
   - "Review work still has the biggest reach: node-forge PR 1152 covers about 27.7 million weekly installs. sift PR 277 is Critical and reaches about 5.8 million; decompress PR 112 reaches about 3.2 million. OmniRoute remains the best from-scratch Critical task because no patched npm release exists."
 pick:
   label: "Worth doing today"
   package: node-forge
   action_label: "Review the open PR"
   action_url: "https://github.com/digitalbazaar/forge/pull/1152"
-  approach: "Read PR 1152 for the nested DigestAlgorithm length check. Confirm forged PKCS#1 v1.5 signatures with garbage ASN.1 children are rejected, skim the regression tests, then leave a review."
+  approach: "Read PR 1152 for the RSA PKCS#1 v1.5 forgery fix. Confirm nested DigestAlgorithm garbage is rejected, check the added regression tests, then leave a review."
