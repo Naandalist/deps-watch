@@ -7,8 +7,21 @@
   action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
   version_note: <= 3.8.50
   weekly_downloads: 57807
-  github_stars: 67454
+  github_stars: 67456
   github_forks: 9497
+  source: ghsa
+
+- package: tidgi
+  id: GHSA-9hc2-hjx8-q6pv
+  severity: Critical
+  status: needs-pr
+  date: "2026-09-18"
+  summary: RCE via malicious TiddlyWiki import still has no patched npm release. Open sandbox tracking issue is ready for a fix contribution.
+  action_url: https://github.com/advisories/GHSA-9hc2-hjx8-q6pv
+  version_note: <= 0.13.0 (npm still 0.13.0-prerelease4)
+  weekly_downloads: 12
+  github_stars: 2003
+  github_forks: 116
   source: ghsa
 
 - package: "@builder.io/gpt-crawler"
@@ -88,68 +101,3 @@
   github_stars: 4680
   github_forks: 597
   source: snyk
-
-- package: "@vendure/core"
-  id: CVE-2026-63472
-  severity: Critical
-  status: fixed
-  date: "2026-09-17"
-  summary: External-authentication account takeover is patched on npm. Upgrade to 3.7.0 or later.
-  action_url: https://github.com/advisories/GHSA-6j36-r6pr-59x4
-  version_note: fixed 3.7.0 (latest 3.7.3)
-  weekly_downloads: 28689
-  github_stars: 8447
-  github_forks: 1490
-  source: ghsa
-
-- package: vm2
-  id: CVE-2026-92935
-  severity: Critical
-  status: fixed
-  date: "2026-09-17"
-  summary: NodeVM nesting guard array-shaped require RCE is patched on npm. Upgrade to 3.11.7 or later.
-  action_url: https://github.com/advisories/GHSA-9fxx-mv6c-j5xp
-  version_note: fixed 3.11.7 (latest 3.12.2)
-  weekly_downloads: 1006359
-  github_stars: 4101
-  github_forks: 328
-  source: ghsa
-
-- package: "@libp2p/peer-store"
-  id: CVE-2026-86039
-  severity: High
-  status: fixed
-  date: "2026-09-17"
-  summary: PeerStore accepted attacker-signed PeerRecords for a victim peer ID. Upgrade to 12.0.24 or later.
-  action_url: https://github.com/advisories/GHSA-vrf4-mx87-p53w
-  version_note: fixed 12.0.24 (latest 12.0.28)
-  weekly_downloads: 87848
-  github_stars: 2577
-  github_forks: 546
-  source: ghsa
-
-- package: exifreader
-  id: CVE-2026-85715
-  severity: High
-  status: fixed
-  date: "2026-09-17"
-  summary: DoS via crafted HEIC/AVIF iloc box memory exhaustion is patched on npm. Upgrade to 4.41.1 or later.
-  action_url: https://github.com/advisories/GHSA-pj96-35fp-cfcc
-  version_note: fixed 4.41.1 (latest 4.45.0)
-  weekly_downloads: 224497
-  github_stars: 997
-  github_forks: 106
-  source: ghsa
-
-- package: "@nuxtjs/mdc"
-  id: CVE-2026-63671
-  severity: High
-  status: fixed
-  date: "2026-09-17"
-  summary: XSS via missed SVG xlink:href and data:text/html sanitizer paths is patched on npm. Upgrade to 0.22.1 or later.
-  action_url: https://github.com/advisories/GHSA-mxm6-v9r6-r94c
-  version_note: fixed 0.22.1 (latest 0.23.1)
-  weekly_downloads: 207624
-  github_stars: 400
-  github_forks: 49
-  source: ghsa

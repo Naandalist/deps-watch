@@ -1,10 +1,10 @@
-headline: "Friday board: OmniRoute still needs a patched release; node-forge and sift open PRs carry the review load; Vendure and vm2 Criticals land in Resolved."
+headline: "Contribution board: OmniRoute and TidGi still need fix PRs; sift, decompress, node-forge, expr-eval, and @alifd/next open PRs need review. Resolved column cleared."
 paragraphs:
-  - "Re-verified for 2026-09-18. OmniRoute remains Critical and unfixed through 3.8.50. gpt-crawler still needs a first contribution. @alifd/next moved to In progress with open PR 5115. Open fix PRs stay active for sift, decompress, node-forge, and expr-eval. Low-star Ready cards (@cgauge/yaml, with-context-mcp) were dropped. Newly disclosed @vendure/core and vm2 Critical fixes, plus @libp2p/peer-store, exifreader, and @nuxtjs/mdc High fixes, fill Recently resolved."
-  - "Review work still has the biggest reach: node-forge PR 1152 covers about 27.7 million weekly installs. sift PR 277 is Critical and reaches about 5.8 million; decompress PR 112 reaches about 3.2 million. OmniRoute remains the best from-scratch Critical task because no patched npm release exists."
+  - "Re-verified for 2026-09-18 with an owner request to drop already-fixed packages. The board is now almost only needs-pr and pr-open. Recently resolved is empty. OmniRoute remains Critical and unfixed through 3.8.50. TidGi (GHSA-9hc2) is a new Critical needs-pr with an open sandbox issue. gpt-crawler still has no fix PR. Open review work stays active for sift, decompress, node-forge, expr-eval, and @alifd/next."
+  - "Highest-impact review today is still node-forge PR 1152 (~27.7M weekly installs). For a from-scratch Critical, OmniRoute has no patched npm release yet. sift PR 277 is Critical and reaches about 5.8M weekly installs if you prefer review over writing a patch."
 pick:
   label: "Worth doing today"
-  package: node-forge
-  action_label: "Review the open PR"
-  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
-  approach: "Read PR 1152 for the nested DigestAlgorithm length check. Confirm forged PKCS#1 v1.5 signatures with garbage ASN.1 children are rejected, skim the regression tests, then leave a review."
+  package: omniroute
+  action_label: "Open a fix PR"
+  action_url: "https://github.com/advisories/GHSA-hf57-cqmx-p4gr"
+  approach: "Read GHSA-hf57 (ACP Custom-Agent RCE). Confirm npm is still 3.8.50 with first_patched_version null, reproduce against the advisory steps, then open a focused fix PR on diegosouzapw/OmniRoute and push for a patched 3.8.51+ release."
