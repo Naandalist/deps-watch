@@ -1,10 +1,10 @@
-headline: "Friday refresh: no new actionable Critical npm advisory; OmniRoute and TidGi still need first fixes."
+headline: "Sunday refresh: no new High/Critical contribution cards; OmniRoute and TidGi still need first fixes."
 paragraphs:
-  - "Re-verified GitHub Advisory and npm data for 2026-09-19. Newly published Critical npm advisories in this sweep already have patched releases, so they do not belong on this upstream-contribution board. OmniRoute remains unfixed through 3.8.50, and TidGi has no patched npm release. gpt-crawler still lacks a fix PR. Open review work remains available for sift, decompress, node-forge, expr-eval, and @alifd/next."
-  - "Highest-impact review is node-forge PR 1152 at about 27.6 million weekly installs. sift PR 277 is Critical and reaches about 4.6 million, while decompress PR 112 reaches about 2.5 million. OmniRoute remains best from-scratch Critical task because GitHub Advisory still lists no first patched version."
+  - "Re-checked GitHub Advisory, Snyk, and Aikido for 2026-09-20. Fresh Critical and High npm advisories in this sweep already have patched releases (or only leave unsupported Angular v19 without a backport), so they stay off this upstream-contribution board. OmniRoute remains unfixed through 3.8.50, TidGi still has no patched npm release, and gpt-crawler still lacks a fix PR. Open review work remains on sift, decompress, node-forge, expr-eval, and @alifd/next. Recently resolved stays empty."
+  - "Highest-impact review is node-forge PR 1152 at about 27.6 million weekly installs. sift PR 277 is Critical at about 4.6 million, and decompress PR 112 reaches about 2.5 million. OmniRoute remains the best from-scratch Critical task because GitHub Advisory still lists no first patched version."
 pick:
   label: "Worth doing today"
-  package: omniroute
-  action_label: "Open a fix PR"
-  action_url: "https://github.com/advisories/GHSA-hf57-cqmx-p4gr"
-  approach: "Read GHSA-hf57 and current OmniRoute release notes. Confirm npm remains 3.8.50 with no first patched version, then open a focused fix PR and push for a patched 3.8.51+ release."
+  package: node-forge
+  action_label: "Review the open PR"
+  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
+  approach: "Read PR 1152 against the RSA PKCS#1 v1.5 forgery advisory. Confirm the nested DigestAlgorithm checks cover the reported cases, then leave a review so maintainers can merge and cut a release past 1.4.0."
