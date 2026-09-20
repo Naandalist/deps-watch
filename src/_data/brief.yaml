@@ -1,7 +1,7 @@
-headline: "Sunday refresh: no new High/Critical contribution cards; OmniRoute and TidGi still need first fixes."
+headline: "Monday refresh: no new High/Critical contribution cards; review load still sits on forge, sift, and decompress."
 paragraphs:
-  - "Re-checked GitHub Advisory, Snyk, and Aikido for 2026-09-20. Fresh Critical and High npm advisories in this sweep already have patched releases (or only leave unsupported Angular v19 without a backport), so they stay off this upstream-contribution board. OmniRoute remains unfixed through 3.8.50, TidGi still has no patched npm release, and gpt-crawler still lacks a fix PR. Open review work remains on sift, decompress, node-forge, expr-eval, and @alifd/next. Recently resolved stays empty."
-  - "Highest-impact review is node-forge PR 1152 at about 27.6 million weekly installs. sift PR 277 is Critical at about 4.6 million, and decompress PR 112 reaches about 2.5 million. OmniRoute remains the best from-scratch Critical task because GitHub Advisory still lists no first patched version."
+  - "Re-checked GitHub Advisory, Snyk, and Aikido for 2026-09-21. Fresh Critical and High npm advisories in this sweep already ship patched releases (or are malware with no upstream fix path), so they stay off this contribution board. OmniRoute remains unfixed through 3.8.50 despite earlier security merges, TidGi still has no patched npm release, and gpt-crawler still lacks a fix PR. Open review work remains on sift, decompress, node-forge, expr-eval, and @alifd/next. Recently resolved stays empty."
+  - "Highest-impact review is node-forge PR 1152 at about 29.0 million weekly installs. sift PR 277 is Critical at about 4.7 million, and decompress PR 112 reaches about 2.5 million. OmniRoute remains the best from-scratch Critical task because GitHub Advisory still lists no first patched version."
 pick:
   label: "Worth doing today"
   package: node-forge
