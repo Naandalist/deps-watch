@@ -1,10 +1,10 @@
-headline: "Monday refresh: no new High/Critical contribution cards; review load still sits on forge, sift, and decompress."
+headline: "Tuesday add: deepmerge (CVE-2026-93753) joins Ready to work at ~70.8M weekly installs with no fix PR yet."
 paragraphs:
-  - "Re-checked GitHub Advisory, Snyk, and Aikido for 2026-09-21. Fresh Critical and High npm advisories in this sweep already ship patched releases (or are malware with no upstream fix path), so they stay off this contribution board. OmniRoute remains unfixed through 3.8.50 despite earlier security merges, TidGi still has no patched npm release, and gpt-crawler still lacks a fix PR. Open review work remains on sift, decompress, node-forge, expr-eval, and @alifd/next. Recently resolved stays empty."
-  - "Highest-impact review is node-forge PR 1152 at about 29.0 million weekly installs. sift PR 277 is Critical at about 4.7 million, and decompress PR 112 reaches about 2.5 million. OmniRoute remains the best from-scratch Critical task because GitHub Advisory still lists no first patched version."
+  - "Re-checked GitHub Advisory, Snyk, and Aikido for 2026-09-22. Most fresh Critical and High npm advisories already ship patched releases, so they stay off this contribution board. Added deepmerge: High prototype-poisoning via mergeObject, still unfixed on 4.3.1, tracking issue 273 open, no fix PR. OmniRoute, TidGi, and gpt-crawler remain needs-pr. Open review work remains on sift, decompress, node-forge, expr-eval, and @alifd/next. Recently resolved stays empty."
+  - "Highest-impact new write is deepmerge issue 273 at about 70.8 million weekly installs. For review, node-forge PR 1152 is still about 30.7 million, sift PR 277 is Critical at about 4.8 million, and decompress PR 112 reaches about 2.6 million. OmniRoute remains the best Critical from-scratch task because GitHub Advisory still lists no first patched version."
 pick:
   label: "Worth doing today"
-  package: node-forge
-  action_label: "Review the open PR"
-  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
-  approach: "Read PR 1152 against the RSA PKCS#1 v1.5 forgery advisory. Confirm the nested DigestAlgorithm checks cover the reported cases, then leave a review so maintainers can merge and cut a release past 1.4.0."
+  package: deepmerge
+  action_label: "Open a fix PR"
+  action_url: "https://github.com/TehShrike/deepmerge/issues/273"
+  approach: "Read issue 273 and CVE-2026-93753, confirm npm 4.3.1 still lacks a key-name denylist in mergeObject, then open a PR that rejects __proto__/constructor/prototype by key name before any assignment and add a regression test for null-prototype targets."
