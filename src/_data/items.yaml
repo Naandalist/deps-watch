@@ -80,8 +80,8 @@
   id: CVE-2026-85393
   severity: High
   status: pr-open
-  date: "2026-09-11"
-  summary: Previous PR was closed. A new fix PR is open and can use review.
+  date: "2026-09-22"
+  summary: Re-checked today — PR 1152 is still open and needs review before a release past 1.4.0.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
   weekly_downloads: 30685098
