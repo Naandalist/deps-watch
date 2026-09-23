@@ -7,8 +7,8 @@
   action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
   version_note: <= 3.8.50
   weekly_downloads: 44224
-  github_stars: 69285
-  github_forks: 9803
+  github_stars: 69610
+  github_forks: 9877
   source: ghsa
 
 - package: tidgi
@@ -33,9 +33,35 @@
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 46
-  github_stars: 22402
+  github_stars: 22406
   github_forks: 2365
   source: snyk
+
+- package: uri-js
+  id: CVE-2026-93690
+  severity: High
+  status: needs-pr
+  date: "2026-09-24"
+  summary: Unicode line/paragraph separators hang removeDotSegments (infinite loop + unbounded memory). Issue 105 is open; npm is still 4.4.1 with no fix PR.
+  action_url: https://github.com/garycourt/uri-js/issues/105
+  version_note: still 4.4.1
+  weekly_downloads: 117851697
+  github_stars: 317
+  github_forks: 65
+  source: manual
+
+- package: source-map-js
+  id: CVE-2026-93749
+  severity: High
+  status: pr-open
+  date: "2026-09-24"
+  summary: Open PR 78 validates indexed source-map section offsets to stop event-loop DoS. npm latest is still 1.2.1 and needs review plus a release.
+  action_url: https://github.com/7rulnik/source-map-js/pull/78
+  version_note: still 1.2.1
+  weekly_downloads: 137333014
+  github_stars: 102
+  github_forks: 14
+  source: manual
 
 - package: deepmerge
   id: CVE-2026-93753
@@ -59,7 +85,7 @@
   action_url: https://github.com/jonschlinkert/gray-matter/pull/182
   version_note: still 4.0.3
   weekly_downloads: 7081736
-  github_stars: 4490
+  github_stars: 4491
   github_forks: 169
   source: manual
 
@@ -80,7 +106,7 @@
   id: CVE-2026-53486
   severity: Critical
   status: pr-open
-  date: "2026-09-23"
+  date: "2026-09-24"
   summary: Re-checked today — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
   action_url: https://github.com/kevva/decompress/pull/112
   version_note: still 4.2.1
@@ -93,7 +119,7 @@
   id: CVE-2026-85393
   severity: High
   status: pr-open
-  date: "2026-09-22"
+  date: "2026-09-24"
   summary: Re-checked today — PR 1152 is still open and needs review before a release past 1.4.0.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
@@ -106,7 +132,7 @@
   id: CVE-2025-12735
   severity: High
   status: pr-open
-  date: "2026-09-23"
+  date: "2026-09-24"
   summary: Re-checked today — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
   action_url: https://github.com/silentmatt/expr-eval/pull/288
   version_note: still 2.0.2
@@ -124,6 +150,6 @@
   action_url: https://github.com/alibaba-fusion/next/pull/5115
   version_note: still 1.27.34
   weekly_downloads: 18520
-  github_stars: 4680
+  github_stars: 4681
   github_forks: 597
   source: snyk

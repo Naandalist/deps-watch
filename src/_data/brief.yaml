@@ -1,10 +1,10 @@
-headline: "Wednesday shift: deepmerge moved to In progress (PR 274) and Critical gray-matter (CVE-2026-78847) joined with open PR 182."
+headline: "Thursday adds: uri-js (needs-pr, ~118M weekly) and source-map-js (open PR 78, ~137M weekly) join the board."
 paragraphs:
-  - "Re-checked GitHub Advisory, Snyk, and Aikido for 2026-09-23. Fresh High and Critical npm advisories largely already ship patched releases (unleash-server, @deepstream/server, request-filtering-agent, js-yaml, orval, and others), so they stay off this contribution board. Material board change: deepmerge issue 273 now has open fix PR 274, so the card moves to In progress. Added gray-matter for CVE-2026-78847 (Critical eval RCE via the js/javascript front-matter engine) with open PR 182. OmniRoute, TidGi, and gpt-crawler remain needs-pr. Open review work also remains on sift, decompress, node-forge, expr-eval, and @alifd/next. Recently resolved stays empty."
-  - "Highest-impact review is deepmerge PR 274 at about 70.4 million weekly installs. node-forge PR 1152 is still about 31.0 million, gray-matter PR 182 is Critical at about 7.1 million, sift PR 277 is Critical at about 4.8 million, and decompress PR 112 reaches about 2.6 million. OmniRoute remains the best Critical from-scratch task because Global GHSA-hf57 still lists no first patched version on npm through 3.8.50."
+  - "Re-checked GitHub Advisory, Snyk, and Aikido for 2026-09-24. Fresh High and Critical npm advisories from the last day (elysia, @fecommunity/reactpress, @openc3/vue-common, 9router, unleash-server, @deepstream/server, request-filtering-agent, and others) already ship patched releases, so they stay off this contribution board. Material board change: added uri-js for CVE-2026-93690 (High infinite-loop DoS in removeDotSegments; tracking issue 105, no fix PR yet) and source-map-js for CVE-2026-93749 (High event-loop DoS; open PR 78). OmniRoute, TidGi, and gpt-crawler remain needs-pr. Prior open review work still holds on deepmerge, gray-matter, sift, decompress, node-forge, expr-eval, and @alifd/next. Recently resolved stays empty."
+  - "Highest-impact review is source-map-js PR 78 at about 137 million weekly installs. uri-js is the best High from-scratch task at about 118 million weekly with issue 105 still waiting on a patch. deepmerge PR 274 remains about 70.4 million, node-forge PR 1152 about 31.0 million, gray-matter PR 182 is Critical at about 7.1 million, and sift PR 277 is Critical at about 4.8 million. OmniRoute is still the top Critical from-scratch card because Global GHSA-hf57 lists no first patched version on npm through 3.8.50."
 pick:
   label: "Worth doing today"
-  package: deepmerge
+  package: source-map-js
   action_label: "Review the open PR"
-  action_url: "https://github.com/TehShrike/deepmerge/pull/274"
-  approach: "Open PR 274, confirm it rejects __proto__ by key name in both merge loops, skim the four new prototype-poisoning regression tests, then leave a review so maintainers can cut a patch past 4.3.1."
+  action_url: "https://github.com/7rulnik/source-map-js/pull/78"
+  approach: "Open PR 78, confirm it rejects huge or non-finite section offset.line/column values before the while-loop walk, skim the regression tests for indexed maps, then leave a review so maintainers can cut a patch past 1.2.1."
