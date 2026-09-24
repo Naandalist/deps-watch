@@ -7,8 +7,8 @@
   action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
   version_note: <= 3.8.50
   weekly_downloads: 44224
-  github_stars: 69610
-  github_forks: 9877
+  github_stars: 69905
+  github_forks: 9922
   source: ghsa
 
 - package: tidgi
@@ -33,7 +33,7 @@
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 46
-  github_stars: 22406
+  github_stars: 22408
   github_forks: 2365
   source: snyk
 
@@ -50,6 +50,19 @@
   github_forks: 65
   source: manual
 
+- package: deepmerge
+  id: CVE-2026-93753
+  severity: High
+  status: needs-pr
+  date: "2026-09-25"
+  summary: Maintainer closed fix PR 274 without merging. Issue 273 is still open and npm remains 4.3.1 — a fresh prototype-poisoning guard PR is needed.
+  action_url: https://github.com/TehShrike/deepmerge/issues/273
+  version_note: still 4.3.1
+  weekly_downloads: 70428221
+  github_stars: 2815
+  github_forks: 215
+  source: snyk
+
 - package: source-map-js
   id: CVE-2026-93749
   severity: High
@@ -62,19 +75,6 @@
   github_stars: 102
   github_forks: 14
   source: manual
-
-- package: deepmerge
-  id: CVE-2026-93753
-  severity: High
-  status: pr-open
-  date: "2026-09-23"
-  summary: Fix PR 274 is open for the prototype-poisoning guard bypass. npm latest is still 4.3.1 and needs review plus a release.
-  action_url: https://github.com/TehShrike/deepmerge/pull/274
-  version_note: still 4.3.1
-  weekly_downloads: 70428221
-  github_stars: 2815
-  github_forks: 214
-  source: snyk
 
 - package: gray-matter
   id: CVE-2026-78847
