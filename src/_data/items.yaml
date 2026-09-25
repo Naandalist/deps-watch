@@ -6,9 +6,9 @@
   summary: Still unfixed through npm 3.8.50. Global GHSA-hf57 lists no first patched version; a release past 3.8.50 is still needed.
   action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
   version_note: <= 3.8.50
-  weekly_downloads: 44224
-  github_stars: 69905
-  github_forks: 9922
+  weekly_downloads: 50399
+  github_stars: 70186
+  github_forks: 9971
   source: ghsa
 
 - package: tidgi
@@ -19,7 +19,7 @@
   summary: RCE via malicious TiddlyWiki import still has no patched npm release. Sandbox tracking issue 713 is open for a fix contribution.
   action_url: https://github.com/tiddly-gittly/TidGi-Desktop/issues/713
   version_note: <= 0.13.0 (npm still 0.13.0-prerelease4)
-  weekly_downloads: 64
+  weekly_downloads: 75
   github_stars: 2002
   github_forks: 116
   source: ghsa
@@ -32,7 +32,7 @@
   summary: Unfixed and no fix PR. The tracking issue is open if you want to take it.
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
-  weekly_downloads: 46
+  weekly_downloads: 51
   github_stars: 22408
   github_forks: 2365
   source: snyk
@@ -45,7 +45,7 @@
   summary: Unicode line/paragraph separators hang removeDotSegments (infinite loop + unbounded memory). Issue 105 is open; npm is still 4.4.1 with no fix PR.
   action_url: https://github.com/garycourt/uri-js/issues/105
   version_note: still 4.4.1
-  weekly_downloads: 117851697
+  weekly_downloads: 150241152
   github_stars: 317
   github_forks: 65
   source: manual
@@ -58,7 +58,7 @@
   summary: Maintainer closed fix PR 274 without merging. Issue 273 is still open and npm remains 4.3.1 — a fresh prototype-poisoning guard PR is needed.
   action_url: https://github.com/TehShrike/deepmerge/issues/273
   version_note: still 4.3.1
-  weekly_downloads: 70428221
+  weekly_downloads: 90578038
   github_stars: 2815
   github_forks: 215
   source: snyk
@@ -71,7 +71,7 @@
   summary: Open PR 78 validates indexed source-map section offsets to stop event-loop DoS. npm latest is still 1.2.1 and needs review plus a release.
   action_url: https://github.com/7rulnik/source-map-js/pull/78
   version_note: still 1.2.1
-  weekly_downloads: 137333014
+  weekly_downloads: 176193621
   github_stars: 102
   github_forks: 14
   source: manual
@@ -84,7 +84,7 @@
   summary: CVE-2026-78847 eval RCE via the js/javascript front-matter engine. Open PR 182 removes that engine and needs review before a release past 4.0.3.
   action_url: https://github.com/jonschlinkert/gray-matter/pull/182
   version_note: still 4.0.3
-  weekly_downloads: 7081736
+  weekly_downloads: 9174363
   github_stars: 4491
   github_forks: 169
   source: manual
@@ -97,7 +97,7 @@
   summary: Open fix PR is ready for review. npm latest is still 17.1.3.
   action_url: https://github.com/crcn/sift.js/pull/277
   version_note: still 17.1.3
-  weekly_downloads: 4791134
+  weekly_downloads: 6195146
   github_stars: 1702
   github_forks: 106
   source: snyk
@@ -110,7 +110,7 @@
   summary: Re-checked today — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
   action_url: https://github.com/kevva/decompress/pull/112
   version_note: still 4.2.1
-  weekly_downloads: 2586685
+  weekly_downloads: 3307725
   github_stars: 419
   github_forks: 55
   source: ghsa
@@ -123,8 +123,8 @@
   summary: Re-checked today — PR 1152 is still open and needs review before a release past 1.4.0.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
-  weekly_downloads: 30970368
-  github_stars: 5332
+  weekly_downloads: 31329258
+  github_stars: 5334
   github_forks: 861
   source: ghsa
 
@@ -136,7 +136,7 @@
   summary: Re-checked today — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
   action_url: https://github.com/silentmatt/expr-eval/pull/288
   version_note: still 2.0.2
-  weekly_downloads: 362942
+  weekly_downloads: 446623
   github_stars: 1353
   github_forks: 269
   source: ghsa
@@ -149,7 +149,7 @@
   summary: Tracking issue went stale; a new fix PR for ConfigProvider deepMerge prototype pollution is open and needs review.
   action_url: https://github.com/alibaba-fusion/next/pull/5115
   version_note: still 1.27.34
-  weekly_downloads: 18520
+  weekly_downloads: 23394
   github_stars: 4681
   github_forks: 597
   source: snyk
