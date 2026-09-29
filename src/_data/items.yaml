@@ -3,12 +3,12 @@
   severity: Critical
   status: needs-pr
   date: "2026-09-29"
-  summary: Re-checked 2026-09-29 — still unfixed through npm 3.8.50. Global GHSA-hf57 lists no first patched version; a release past 3.8.50 is still needed.
+  summary: Afternoon re-check — still unfixed through npm 3.8.50. Global GHSA-hf57 lists no first patched version; release/v3.8.51 is not green yet and has not shipped.
   action_url: https://github.com/advisories/GHSA-hf57-cqmx-p4gr
   version_note: <= 3.8.50
   weekly_downloads: 53702
-  github_stars: 71066
-  github_forks: 10117
+  github_stars: 71079
+  github_forks: 10118
   source: ghsa
 
 - package: tidgi
@@ -29,7 +29,7 @@
   severity: High
   status: needs-pr
   date: "2026-09-29"
-  summary: Re-checked 2026-09-29 — still unfixed and no fix PR. Tracking issue 418 remains open for a contribution.
+  summary: Afternoon re-check — still unfixed and no fix PR. Tracking issue 418 remains open for a contribution.
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 32
@@ -63,6 +63,19 @@
   github_forks: 215
   source: snyk
 
+- package: http-cache-semantics
+  id: CVE-2026-93748
+  severity: High
+  status: pr-open
+  date: "2026-09-29"
+  summary: max-stale can override shared-cache reuse bans and leak Set-Cookie. Open PR 58 needs review; npm latest is still 4.2.0.
+  action_url: https://github.com/kornelski/http-cache-semantics/pull/58
+  version_note: still 4.2.0
+  weekly_downloads: 57326639
+  github_stars: 260
+  github_forks: 35
+  source: snyk
+
 - package: source-map-js
   id: CVE-2026-93749
   severity: High
@@ -94,7 +107,7 @@
   severity: Critical
   status: pr-open
   date: "2026-09-29"
-  summary: Re-checked 2026-09-29 — open fix PR 277 is still ready for review. npm latest remains 17.1.3.
+  summary: Afternoon re-check — open fix PR 277 is still ready for review. npm latest remains 17.1.3.
   action_url: https://github.com/crcn/sift.js/pull/277
   version_note: still 17.1.3
   weekly_downloads: 7476777
@@ -107,7 +120,7 @@
   severity: Critical
   status: pr-open
   date: "2026-09-24"
-  summary: Re-checked today — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
+  summary: Afternoon re-check — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
   action_url: https://github.com/kevva/decompress/pull/112
   version_note: still 4.2.1
   weekly_downloads: 3841928
@@ -120,12 +133,12 @@
   severity: High
   status: pr-open
   date: "2026-09-24"
-  summary: Re-checked today — PR 1152 is still open and needs review before a release past 1.4.0.
+  summary: Afternoon re-check — PR 1152 is still open and needs review before a release past 1.4.0.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
   weekly_downloads: 44573650
   github_stars: 5334
-  github_forks: 861
+  github_forks: 860
   source: ghsa
 
 - package: expr-eval
@@ -133,7 +146,7 @@
   severity: High
   status: pr-open
   date: "2026-09-24"
-  summary: Re-checked today — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
+  summary: Afternoon re-check — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
   action_url: https://github.com/silentmatt/expr-eval/pull/288
   version_note: still 2.0.2
   weekly_downloads: 510458
