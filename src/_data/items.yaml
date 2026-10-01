@@ -6,7 +6,7 @@
   summary: RCE via malicious TiddlyWiki import still has no patched npm release. Sandbox tracking issue 713 is open for a fix contribution.
   action_url: https://github.com/tiddly-gittly/TidGi-Desktop/issues/713
   version_note: <= 0.13.0 (npm still 0.13.0-prerelease4)
-  weekly_downloads: 73
+  weekly_downloads: 60
   github_stars: 2002
   github_forks: 116
   source: ghsa
@@ -16,26 +16,13 @@
   severity: High
   status: needs-pr
   date: "2026-09-30"
-  summary: Re-checked 2026-09-30 — still unfixed and no fix PR. Tracking issue 418 remains open for a contribution.
+  summary: Re-checked 2026-10-02 — still unfixed and no fix PR. Tracking issue 418 remains open for a contribution.
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
-  weekly_downloads: 26
-  github_stars: 22407
+  weekly_downloads: 21
+  github_stars: 22409
   github_forks: 2363
   source: snyk
-
-- package: uri-js
-  id: CVE-2026-93690
-  severity: High
-  status: needs-pr
-  date: "2026-09-24"
-  summary: Unicode line/paragraph separators hang removeDotSegments (infinite loop + unbounded memory). Issue 105 is open; npm is still 4.4.1 with no fix PR.
-  action_url: https://github.com/garycourt/uri-js/issues/105
-  version_note: still 4.4.1
-  weekly_downloads: 182016045
-  github_stars: 317
-  github_forks: 68
-  source: manual
 
 - package: deepmerge
   id: CVE-2026-93753
@@ -45,20 +32,46 @@
   summary: Maintainer closed fix PR 274 without merging. Issue 273 is still open and npm remains 4.3.1 — a fresh prototype-poisoning guard PR is needed.
   action_url: https://github.com/TehShrike/deepmerge/issues/273
   version_note: still 4.3.1
-  weekly_downloads: 111813817
+  weekly_downloads: 114175440
   github_stars: 2816
-  github_forks: 216
+  github_forks: 217
   source: snyk
+
+- package: braces
+  id: CVE-2026-93687
+  severity: High
+  status: pr-open
+  date: "2026-10-02"
+  summary: Uncontrolled recursion in AST walkers (stack-overflow DoS). Open PR 72 adds depth guards and needs review; npm still 3.0.3 with no patched release.
+  action_url: https://github.com/micromatch/braces/pull/72
+  version_note: still 3.0.3
+  weekly_downloads: 198979336
+  github_stars: 250
+  github_forks: 85
+  source: snyk
+
+- package: uri-js
+  id: CVE-2026-93690
+  severity: High
+  status: pr-open
+  date: "2026-10-02"
+  summary: Unicode line/paragraph separators hang removeDotSegments. Fix PR 107 is open for review; npm remains 4.4.1.
+  action_url: https://github.com/garycourt/uri-js/pull/107
+  version_note: still 4.4.1
+  weekly_downloads: 184883829
+  github_stars: 317
+  github_forks: 68
+  source: manual
 
 - package: http-cache-semantics
   id: CVE-2026-93748
   severity: High
   status: pr-open
   date: "2026-09-30"
-  summary: Re-checked 2026-09-30 — open PR 58 still needs review for max-stale shared-cache reuse bans. npm latest remains 4.2.0.
+  summary: Re-checked 2026-10-02 — open PR 58 still needs review for max-stale shared-cache reuse bans. npm latest remains 4.2.0.
   action_url: https://github.com/kornelski/http-cache-semantics/pull/58
   version_note: still 4.2.0
-  weekly_downloads: 58280206
+  weekly_downloads: 59089098
   github_stars: 260
   github_forks: 37
   source: snyk
@@ -71,7 +84,7 @@
   summary: CVE-2026-78847 eval RCE via the js/javascript front-matter engine. Open PR 182 removes that engine and needs review before a release past 4.0.3.
   action_url: https://github.com/jonschlinkert/gray-matter/pull/182
   version_note: still 4.0.3
-  weekly_downloads: 11746887
+  weekly_downloads: 12038336
   github_stars: 4491
   github_forks: 168
   source: manual
@@ -81,10 +94,10 @@
   severity: Critical
   status: pr-open
   date: "2026-09-30"
-  summary: Re-checked 2026-09-30 — open fix PR 277 is still ready for review. npm latest remains 17.1.3.
+  summary: Re-checked 2026-10-02 — open fix PR 277 is still ready for review. npm latest remains 17.1.3.
   action_url: https://github.com/crcn/sift.js/pull/277
   version_note: still 17.1.3
-  weekly_downloads: 7657960
+  weekly_downloads: 7785870
   github_stars: 1703
   github_forks: 108
   source: snyk
@@ -94,10 +107,10 @@
   severity: Critical
   status: pr-open
   date: "2026-09-24"
-  summary: Re-checked today — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
+  summary: Re-checked 2026-10-02 — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
   action_url: https://github.com/kevva/decompress/pull/112
   version_note: still 4.2.1
-  weekly_downloads: 3856703
+  weekly_downloads: 3897145
   github_stars: 419
   github_forks: 56
   source: ghsa
@@ -107,10 +120,10 @@
   severity: High
   status: pr-open
   date: "2026-09-24"
-  summary: Re-checked today — PR 1152 is still open and needs review before a release past 1.4.0.
+  summary: Re-checked 2026-10-02 — PR 1152 is still open and needs review before a release past 1.4.0.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
-  weekly_downloads: 45117160
+  weekly_downloads: 45926228
   github_stars: 5334
   github_forks: 860
   source: ghsa
@@ -120,10 +133,10 @@
   severity: High
   status: pr-open
   date: "2026-09-24"
-  summary: Re-checked today — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
+  summary: Re-checked 2026-10-02 — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
   action_url: https://github.com/silentmatt/expr-eval/pull/288
   version_note: still 2.0.2
-  weekly_downloads: 519788
+  weekly_downloads: 527071
   github_stars: 1353
   github_forks: 269
   source: ghsa
@@ -136,7 +149,7 @@
   summary: OS command injection via document URL extension in Poppler PDF handling. Open PR 208 passes paths as exec arguments and needs review; npm still 1.1.20.
   action_url: https://github.com/getomni-ai/zerox/pull/208
   version_note: still 1.1.20
-  weekly_downloads: 428
+  weekly_downloads: 453
   github_stars: 12260
   github_forks: 848
   source: manual
