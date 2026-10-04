@@ -2,8 +2,8 @@
   id: GHSA-9hc2-hjx8-q6pv
   severity: Critical
   status: needs-pr
-  date: "2026-09-20"
-  summary: RCE via malicious TiddlyWiki import still has no patched npm release. Sandbox tracking issue 713 is open for a fix contribution.
+  date: "2026-10-05"
+  summary: Re-checked 2026-10-05 — RCE via malicious TiddlyWiki import still has no patched npm release and no fix PR. Sandbox tracking issue 713 is open for a fix contribution.
   action_url: https://github.com/tiddly-gittly/TidGi-Desktop/issues/713
   version_note: <= 0.13.0 (npm still 0.13.0-prerelease4)
   weekly_downloads: 38
@@ -67,8 +67,8 @@
   id: CVE-2026-78847
   severity: Critical
   status: pr-open
-  date: "2026-09-23"
-  summary: CVE-2026-78847 eval RCE via the js/javascript front-matter engine. Open PR 182 removes that engine and needs review before a release past 4.0.3.
+  date: "2026-10-05"
+  summary: Re-checked 2026-10-05 — open PR 182 still removes the eval-based js/javascript front-matter engine and needs review before a release past 4.0.3.
   action_url: https://github.com/jonschlinkert/gray-matter/pull/182
   version_note: still 4.0.3
   weekly_downloads: 12508883
