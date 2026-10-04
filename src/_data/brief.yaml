@@ -1,10 +1,10 @@
-headline: "Twelve High and Critical cards still open; braces PR 72 remains the highest-impact review at ~205M weekly installs."
+headline: "Eleven High and Critical cards remain open after http-cache-semantics dropped off; uri-js PR 107 is today's review pick at ~194M weekly installs."
 paragraphs:
-  - "Morning refresh for 2026-10-04 (Asia/Jakarta). Re-opened every action_url and re-scanned GitHub Advisory, Snyk, and Aikido. No new High/Critical npm cards worth adding — fresh advisory traffic is already patched (@a2ui/web_core 0.10.2, trigger.dev 4.5.4, probe-image-size 7.4.0, @fastify/busboy 3.2.1, vm2, orval, next/satori). All three needs-pr cards stay true: tidgi issue 713 and gpt-crawler issue 418 remain open with no fix PR; deepmerge issue 273 stays closed wontfix with PR 274 unmerged and npm still 4.3.1. All nine fix PRs remain open. Recently resolved stays empty."
-  - "Highest-impact review today is braces PR 72 at about 205 million weekly installs (updated 2026-10-03). Close behind: uri-js PR 107 (~190M), http-cache-semantics PR 58 (~60.4M), and node-forge PR 1152 (~47.5M). Other open review load: gray-matter PR 182 (Critical, ~12.4M), sift PR 277 (Critical, ~7.9M), decompress PR 112, expr-eval PR 288, and zerox PR 208 (Critical, 12.3k stars). Best from-scratch write remains deepmerge at about 118 million weekly despite the closed tracking issue — or TidGi issue 713 and gpt-crawler issue 418 for Critical/High needs-pr work with open maintainers."
+  - "Morning refresh for 2026-10-05 (Asia/Jakarta). Re-opened every action_url and re-scanned GitHub Advisory, Snyk, and Aikido. The http-cache-semantics card is gone: the maintainer closed PR 58 and tracking issue 56 as not planned, calling CVE-2026-93748 a misreading of RFC 9111, and the advisory is now disputed upstream, so it is no longer a useful contribution target. No new High/Critical npm cards worth adding; fresh advisory traffic is already patched (trigger.dev, @fastify/busboy, probe-image-size, figlet, vm2 3.12.x, devalue, axios), and the Snyk and Aikido front pages are dominated by malicious-package entries. All three needs-pr cards stay true and all eight remaining fix PRs are still open."
+  - "Biggest review queues by weekly installs: braces PR 72 (~207M, now merge-clean, with contributors asking for more maintainers), uri-js PR 107 (~194M), node-forge PR 1152 (~48M), and gray-matter PR 182 (Critical, ~12.5M). Critical PRs at sift 277, decompress 112, and zerox 208 also need eyes, plus expr-eval 288. For writing a fix from scratch, deepmerge (~120M weekly, issue 273 closed wontfix) still has no patched release, while TidGi issue 713 and gpt-crawler issue 418 remain open with no fix PR."
 pick:
   label: "Worth doing today"
-  package: braces
+  package: uri-js
   action_label: "Review the open PR"
-  action_url: "https://github.com/micromatch/braces/pull/72"
-  approach: "Read PR 72 and issue 70 for CVE-2026-93687, confirm the AST walkers gain a safe depth guard without breaking valid expansions, then leave a review so a release past 3.0.3 can ship."
+  action_url: "https://github.com/garycourt/uri-js/pull/107"
+  approach: "Read PR 107 against CVE-2026-93690, check that removeDotSegments handles Unicode line and paragraph separators without changing normal path normalization, and leave a review so a release past 4.4.1 can ship."
