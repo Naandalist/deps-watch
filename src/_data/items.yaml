@@ -7,7 +7,7 @@
   action_url: https://github.com/tiddly-gittly/TidGi-Desktop/issues/713
   version_note: <= 0.13.0 (npm still 0.13.0-prerelease4)
   weekly_downloads: 27
-  github_stars: 2002
+  github_stars: 2004
   github_forks: 116
   source: ghsa
 
@@ -20,8 +20,8 @@
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 11
-  github_stars: 22402
-  github_forks: 2357
+  github_stars: 22403
+  github_forks: 2354
   source: snyk
 
 - package: deepmerge
@@ -41,13 +41,13 @@
   id: CVE-2026-93687
   severity: High
   status: pr-open
-  date: "2026-10-06"
-  summary: PR 72 was closed unmerged after the maintainer disputed the CVE and pointed to maxLength; new PR 77 adds an opt-in maxDepth limit and needs review, while npm stays at 3.0.3.
-  action_url: https://github.com/micromatch/braces/pull/77
+  date: "2026-10-07"
+  summary: PR 77 (opt-in maxDepth) was closed by its author on 2026-10-06 while the maintainer still disputes the CVE; review open PR 79, which adds a nesting limit because the default maxLength does not cover deep nesting, while npm stays at 3.0.3.
+  action_url: https://github.com/micromatch/braces/pull/79
   version_note: still 3.0.3
   weekly_downloads: 207216175
-  github_stars: 255
-  github_forks: 102
+  github_stars: 256
+  github_forks: 105
   source: snyk
 
 - package: uri-js
@@ -72,7 +72,7 @@
   action_url: https://github.com/jonschlinkert/gray-matter/pull/182
   version_note: still 4.0.3
   weekly_downloads: 12620882
-  github_stars: 4490
+  github_stars: 4491
   github_forks: 168
   source: manual
 
@@ -111,8 +111,8 @@
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
   weekly_downloads: 48409926
-  github_stars: 5336
-  github_forks: 862
+  github_stars: 5337
+  github_forks: 861
   source: ghsa
 
 - package: expr-eval
