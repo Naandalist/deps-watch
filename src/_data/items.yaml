@@ -20,7 +20,7 @@
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 11
-  github_stars: 22403
+  github_stars: 22407
   github_forks: 2354
   source: snyk
 
@@ -41,13 +41,13 @@
   id: CVE-2026-93687
   severity: High
   status: pr-open
-  date: "2026-10-07"
-  summary: PR 77 (opt-in maxDepth) was closed by its author on 2026-10-06 while the maintainer still disputes the CVE; review open PR 79, which adds a nesting limit because the default maxLength does not cover deep nesting, while npm stays at 3.0.3.
+  date: "2026-10-08"
+  summary: Maintainer jonschlinkert closed PR 81 on 2026-10-07 as a duplicate of PR 79, making PR 79's nesting limit the fix to review while npm stays at 3.0.3 (PR 82 is a later alternative).
   action_url: https://github.com/micromatch/braces/pull/79
   version_note: still 3.0.3
   weekly_downloads: 207216175
-  github_stars: 256
-  github_forks: 105
+  github_stars: 258
+  github_forks: 111
   source: snyk
 
 - package: uri-js
@@ -72,7 +72,7 @@
   action_url: https://github.com/jonschlinkert/gray-matter/pull/182
   version_note: still 4.0.3
   weekly_downloads: 12620882
-  github_stars: 4491
+  github_stars: 4490
   github_forks: 168
   source: manual
 
@@ -111,7 +111,7 @@
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
   weekly_downloads: 48409926
-  github_stars: 5337
+  github_stars: 5336
   github_forks: 861
   source: ghsa
 
@@ -137,6 +137,6 @@
   action_url: https://github.com/getomni-ai/zerox/pull/208
   version_note: still 1.1.20
   weekly_downloads: 670
-  github_stars: 12254
+  github_stars: 12253
   github_forks: 848
   source: manual
