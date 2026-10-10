@@ -119,8 +119,8 @@
   id: CVE-2026-85672
   severity: Critical
   status: pr-open
-  date: "2026-10-01"
-  summary: OS command injection via document URL extension in Poppler PDF handling. Open PR 208 passes paths as exec arguments and needs review; npm still 1.1.20.
+  date: "2026-10-11"
+  summary: Re-checked 2026-10-11 — OS command injection via document URL extension in Poppler PDF handling. Open PR 208 passes paths as exec arguments and needs review; npm still 1.1.20.
   action_url: https://github.com/getomni-ai/zerox/pull/208
   version_note: still 1.1.20
   weekly_downloads: 670
