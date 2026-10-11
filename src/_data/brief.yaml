@@ -1,10 +1,10 @@
-headline: "No new unpatched High or Critical npm advisories today; gray-matter PR 182 is the Critical fix most worth a review."
+headline: "No new unpatched High or Critical npm advisories today; node-forge PR 1152 is the High fix most worth a review."
 paragraphs:
-  - "Morning refresh for 2026-10-11 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. braces PR 79 and alternative PR 87, deepmerge PR 277, uri-js PR 107, and node-forge PR 1152 all saw activity on 2026-10-09. The zerox card was re-checked and stays open. New GHSA entries this cycle (tinacms, fast-jwt, mariadb, handlebars, msgpack5, generator-jhipster, praisonai) already ship patched versions, so no cards were added."
-  - "Review load by weekly installs: braces PR 79 (~207M), uri-js PR 107 (~195M), deepmerge PR 277 (~121M), and node-forge PR 1152 (~48M) lead the High queue. Critical PRs at gray-matter 182 (~12.6M), decompress 112, and zerox 208 still wait on maintainers. For writing a fix from scratch, TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards."
+  - "Morning refresh for 2026-10-12 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. The decompress, node-forge, and expr-eval cards were re-checked and stay open. Recent GHSA entries (tinacms, fast-jwt, mariadb, handlebars, msgpack5, generator-jhipster, ghost, praisonai) already ship patched versions, so no cards were added."
+  - "Review load by weekly installs: braces PR 79 (~207M), uri-js PR 107 (~195M), deepmerge PR 277 (~121M), and node-forge PR 1152 (~48M) lead the High queue. Critical PRs at gray-matter 182, decompress 112, and zerox 208 still wait on maintainers. For writing a fix from scratch, TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards."
 pick:
   label: "Worth doing today"
-  package: gray-matter
+  package: node-forge
   action_label: "Review the open PR"
-  action_url: "https://github.com/jonschlinkert/gray-matter/pull/182"
-  approach: "Read PR 182 alongside CVE-2026-78847, run the test suite, and check that YAML and JSON front matter still parse unchanged; a clear, test-backed review helps the maintainer move toward a release past 4.0.3."
+  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
+  approach: "Read PR 1152 alongside CVE-2026-85393, run the test suite, and leave a clear, test-backed review so the maintainers can move toward a release past 1.4.0."

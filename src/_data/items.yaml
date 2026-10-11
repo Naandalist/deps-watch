@@ -46,7 +46,7 @@
   action_url: https://github.com/micromatch/braces/pull/79
   version_note: still 3.0.3
   weekly_downloads: 207216175
-  github_stars: 258
+  github_stars: 259
   github_forks: 111
   source: snyk
 
@@ -80,8 +80,8 @@
   id: CVE-2026-53486
   severity: Critical
   status: pr-open
-  date: "2026-10-03"
-  summary: Re-checked 2026-10-03 — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
+  date: "2026-10-12"
+  summary: Re-checked 2026-10-12 — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
   action_url: https://github.com/kevva/decompress/pull/112
   version_note: still 4.2.1
   weekly_downloads: 3977733
@@ -93,8 +93,8 @@
   id: CVE-2026-85393
   severity: High
   status: pr-open
-  date: "2026-10-03"
-  summary: Re-checked 2026-10-03 — PR 1152 is still open (updated 2026-10-02) and needs review before a release past 1.4.0.
+  date: "2026-10-12"
+  summary: Re-checked 2026-10-12 — PR 1152 is still open (updated 2026-10-09) and needs review before a release past 1.4.0.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
   weekly_downloads: 48409926
@@ -106,8 +106,8 @@
   id: CVE-2026-12735
   severity: High
   status: pr-open
-  date: "2026-10-03"
-  summary: Re-checked 2026-10-03 — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
+  date: "2026-10-12"
+  summary: Re-checked 2026-10-12 — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
   action_url: https://github.com/silentmatt/expr-eval/pull/288
   version_note: still 2.0.2
   weekly_downloads: 543654
@@ -124,6 +124,6 @@
   action_url: https://github.com/getomni-ai/zerox/pull/208
   version_note: still 1.1.20
   weekly_downloads: 670
-  github_stars: 12257
+  github_stars: 12256
   github_forks: 848
   source: manual
