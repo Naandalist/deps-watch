@@ -1,10 +1,10 @@
-headline: "No new unpatched High or Critical npm cards today; uri-js PR 107 is the High fix most worth a review by weekly installs."
+headline: "No new unpatched High or Critical npm cards today; deepmerge PR 277 is the High fix most worth a review this morning."
 paragraphs:
-  - "Morning refresh for 2026-10-14 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. Recent GHSA entries (TinaCMS, fast-jwt, handlebars, payload, ghost, mariadb, and others) already ship patched versions. Snyk and Aikido surfaces were mostly malicious packages or already-fixed advisories, so no cards were added or dropped."
+  - "Morning refresh for 2026-10-15 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. The newest GHSA entries (TinaCMS, fast-jwt, mariadb, handlebars, msgpack5, generator-jhipster, ghost) already ship patched versions, and the Snyk feed was mostly malicious packages or advisories with fixes, so no cards were added or dropped."
   - "Review load by weekly installs: braces PR 79 (~169M), uri-js PR 107 (~155M), deepmerge PR 277 (~102M), and node-forge PR 1152 (~40M) lead the High queue. Critical PRs at gray-matter 182, decompress 112, and zerox 208 still wait on maintainers. For writing a fix from scratch, TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards."
 pick:
   label: "Worth doing today"
-  package: uri-js
+  package: deepmerge
   action_label: "Review the open PR"
-  action_url: "https://github.com/garycourt/uri-js/pull/107"
-  approach: "Read PR 107 alongside CVE-2026-93690, confirm the removeDotSegments hang on U+2028/U+2029 is covered by tests, and leave a clear, test-backed review so maintainers can move toward a release past 4.4.1."
+  action_url: "https://github.com/TehShrike/deepmerge/pull/277"
+  approach: "Read PR 277 alongside CVE-2026-93753, check that its tests cover merging objects with own __proto__ keys without changing the result prototype, and leave a concise, test-backed review that gives the maintainer a clear reason to ship a release past 4.3.1."
