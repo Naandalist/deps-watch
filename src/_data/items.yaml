@@ -2,8 +2,8 @@
   id: GHSA-9hc2-hjx8-q6pv
   severity: Critical
   status: needs-pr
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — RCE via malicious TiddlyWiki import still has no patched npm release and no fix PR. Sandbox tracking issue 713 remains open for a fix contribution.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — RCE via malicious TiddlyWiki import still has no patched npm release and no fix PR. Sandbox tracking issue 713 remains open for a fix contribution.
   action_url: https://github.com/tiddly-gittly/TidGi-Desktop/issues/713
   version_note: <= 0.13.0 (npm still 0.13.0-prerelease4)
   weekly_downloads: 1
@@ -15,60 +15,60 @@
   id: CVE-2026-82286
   severity: High
   status: needs-pr
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — still unfixed and no security fix PR. Tracking issue 418 remains open for a contribution.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — still unfixed and no security fix PR. Tracking issue 418 remains open for a contribution.
   action_url: https://github.com/BuilderIO/gpt-crawler/issues/418
   version_note: 1.5.1
   weekly_downloads: 44
-  github_stars: 22399
-  github_forks: 2351
+  github_stars: 22397
+  github_forks: 2349
   source: snyk
 
 - package: deepmerge
   id: CVE-2026-93753
   severity: High
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — PR 277 still defines own __proto__ keys as plain data properties so merges cannot swap the result prototype; it needs review because the maintainer closed issue 273 as noise and npm remains 4.3.1.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — PR 277 still defines own __proto__ keys as plain data properties so merges cannot swap the result prototype; it needs review because the maintainer closed issue 273 as noise and npm remains 4.3.1.
   action_url: https://github.com/TehShrike/deepmerge/pull/277
   version_note: still 4.3.1
   weekly_downloads: 101896066
-  github_stars: 2817
-  github_forks: 222
+  github_stars: 2818
+  github_forks: 223
   source: snyk
 
 - package: braces
   id: CVE-2026-93687
   severity: High
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — PR 79 is still open as the nesting-limit fix to review; alternatives PR 87 and PR 82 remain open, and npm stays at 3.0.3.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — PR 79 is still open as the nesting-limit fix to review; alternatives PR 78, 82, 87 and 88 also remain open, and npm stays at 3.0.3.
   action_url: https://github.com/micromatch/braces/pull/79
   version_note: still 3.0.3
   weekly_downloads: 169139316
-  github_stars: 262
-  github_forks: 123
+  github_stars: 263
+  github_forks: 125
   source: snyk
 
 - package: uri-js
   id: CVE-2026-93690
   severity: High
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — fix PR 107 for the removeDotSegments hang on Unicode separators is still open and needs review; npm remains 4.4.1.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — fix PR 107 for the removeDotSegments hang on Unicode separators is still open and needs review; npm remains 4.4.1.
   action_url: https://github.com/garycourt/uri-js/pull/107
   version_note: still 4.4.1
   weekly_downloads: 155325261
   github_stars: 317
-  github_forks: 70
+  github_forks: 71
   source: manual
 
 - package: gray-matter
   id: CVE-2026-78847
   severity: Critical
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — open PR 182 still removes the eval-based js/javascript front-matter engine and needs review before a release past 4.0.3.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — open PR 182 still removes the eval-based js/javascript front-matter engine and needs review before a release past 4.0.3.
   action_url: https://github.com/jonschlinkert/gray-matter/pull/182
   version_note: still 4.0.3
   weekly_downloads: 10968054
@@ -80,8 +80,8 @@
   id: CVE-2026-53486
   severity: Critical
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — PR 112 is still open for the path-traversal / slip fix. npm remains 4.2.1.
   action_url: https://github.com/kevva/decompress/pull/112
   version_note: still 4.2.1
   weekly_downloads: 3177955
@@ -93,21 +93,21 @@
   id: CVE-2026-85393
   severity: High
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — PR 1152 is still open and needs review before a release past 1.4.0.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — PR 1152 is still open and needs review before a release past 1.4.0.
   action_url: https://github.com/digitalbazaar/forge/pull/1152
   version_note: still 1.4.0
   weekly_downloads: 40010129
-  github_stars: 5339
-  github_forks: 865
+  github_stars: 5341
+  github_forks: 866
   source: ghsa
 
 - package: expr-eval
   id: CVE-2026-12735
   severity: High
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — PR 288 is still open for the function-injection fix. npm remains unpatched at 2.0.2.
   action_url: https://github.com/silentmatt/expr-eval/pull/288
   version_note: still 2.0.2
   weekly_downloads: 425059
@@ -119,11 +119,11 @@
   id: CVE-2026-85672
   severity: Critical
   status: pr-open
-  date: "2026-10-15"
-  summary: Re-checked 2026-10-15 — OS command injection via document URL extension in Poppler PDF handling. Open PR 208 passes paths as exec arguments and needs review; npm still 1.1.20.
+  date: "2026-10-16"
+  summary: Re-checked 2026-10-16 — OS command injection via document URL extension in Poppler PDF handling. Open PR 208 passes paths as exec arguments and needs review; npm still 1.1.20.
   action_url: https://github.com/getomni-ai/zerox/pull/208
   version_note: still 1.1.20
   weekly_downloads: 355
-  github_stars: 12250
-  github_forks: 847
+  github_stars: 12248
+  github_forks: 846
   source: manual
