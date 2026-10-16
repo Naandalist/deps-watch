@@ -1,10 +1,10 @@
-headline: "No new unpatched High or Critical npm cards today; braces PR 79 is the most-installed fix worth a review this morning."
+headline: "No new unpatched High or Critical npm cards today; node-forge PR 1152 picked up fresh merge requests and is the review to unblock this morning."
 paragraphs:
-  - "Morning refresh for 2026-10-16 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. The newest GHSA entries (TanStack Start, Qwik, OpenNext Cloudflare, Claude Code) already ship patched versions, and the Snyk feed was mostly malicious packages or advisories with fixes, so no cards were added or dropped."
-  - "Review load by weekly installs: braces PR 79 (~169M), uri-js PR 107 (~155M), deepmerge PR 277 (~102M), and node-forge PR 1152 (~40M) lead the High queue. braces now has five competing nesting-limit PRs open (78, 79, 82, 87, 88), so a clear comparison review would help the maintainer pick one. Critical PRs at gray-matter 182, decompress 112, and zerox 208 still wait on maintainers, while TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards for writing a fix."
+  - "Morning refresh for 2026-10-17 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. The newest GHSA entries (TanStack Start, Qwik, OpenNext Cloudflare, Claude Code) and this week's Snyk entries (thrift, Payload CMS adapters, nextjs-auth0) already ship fixed versions, so no cards were added or dropped."
+  - "node-forge PR 1152 (~40M weekly installs) got another downstream request to merge on 2026-10-16 and is still blocked on maintainer review. The rest of the High queue by installs is braces PR 79 (~169M, with alternatives 78, 82, 87 and 88 also open), uri-js PR 107 (~155M), and deepmerge PR 277 (~102M). Critical PRs at gray-matter 182, decompress 112, and zerox 208 still wait on maintainers, while TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards for writing a fix."
 pick:
   label: "Worth doing today"
-  package: braces
+  package: node-forge
   action_label: "Review the open PR"
-  action_url: "https://github.com/micromatch/braces/pull/79"
-  approach: "Read PR 79 alongside CVE-2026-93687, compare its keep-as-text depth limit with the throwing approaches in PRs 87 and 88, run its nesting-depth tests, and leave a short, test-backed review that helps the maintainer settle on one fix and ship a release past 3.0.3."
+  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
+  approach: "Read PR 1152 next to CVE-2026-85393, check out the branch, run the full forge test suite as earlier commenters asked, and leave a concise test-backed review so the maintainers have what they need to merge and ship a release past 1.4.0."
