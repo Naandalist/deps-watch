@@ -1,10 +1,10 @@
-headline: "No new unpatched High or Critical npm cards today; node-forge PR 1152 picked up fresh merge requests and is the review to unblock this morning."
+headline: "Quiet Sunday: no new unpatched High or Critical npm cards, so uri-js PR 107 is the high-install review worth a contributor's time today."
 paragraphs:
-  - "Morning refresh for 2026-10-17 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. The newest GHSA entries (TanStack Start, Qwik, OpenNext Cloudflare, Claude Code) and this week's Snyk entries (thrift, Payload CMS adapters, nextjs-auth0) already ship fixed versions, so no cards were added or dropped."
-  - "node-forge PR 1152 (~40M weekly installs) got another downstream request to merge on 2026-10-16 and is still blocked on maintainer review. The rest of the High queue by installs is braces PR 79 (~169M, with alternatives 78, 82, 87 and 88 also open), uri-js PR 107 (~155M), and deepmerge PR 277 (~102M). Critical PRs at gray-matter 182, decompress 112, and zerox 208 still wait on maintainers, while TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards for writing a fix."
+  - "Morning refresh for 2026-10-18 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs remain open and unmerged, both Ready tracking issues remain open, and no package on the board has published a patched npm release. The newest GHSA entries (TanStack Start, Qwik, OpenNext Cloudflare, Claude Code) and this week's Snyk entries (undici, nodemailer, qs, Payload CMS adapters, nextjs-auth0) already ship fixed versions, so no cards were added or dropped."
+  - "uri-js PR 107 (~155M weekly installs) still has no maintainer review since 2026-10-09. The rest of the High queue by installs is braces PR 79 (~169M, with alternatives 78, 82, 87 and 88 also open), deepmerge PR 277 (~102M), and node-forge PR 1152 (~40M), which got a downstream merge request on 2026-10-16. Critical PRs at gray-matter 182, decompress 112, and zerox 208 still wait on maintainers, while TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards for writing a fix."
 pick:
   label: "Worth doing today"
-  package: node-forge
+  package: uri-js
   action_label: "Review the open PR"
-  action_url: "https://github.com/digitalbazaar/forge/pull/1152"
-  approach: "Read PR 1152 next to CVE-2026-85393, check out the branch, run the full forge test suite as earlier commenters asked, and leave a concise test-backed review so the maintainers have what they need to merge and ship a release past 1.4.0."
+  action_url: "https://github.com/garycourt/uri-js/pull/107"
+  approach: "Read PR 107 next to CVE-2026-93690, run the existing uri-js test suite on the branch, and leave a short test-backed review confirming normal URI normalization is unchanged so the maintainer has an easy path to a release past 4.4.1."
