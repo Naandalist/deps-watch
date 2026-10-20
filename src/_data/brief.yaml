@@ -1,10 +1,10 @@
-headline: "Steady Tuesday: no new unpatched High or Critical npm advisories overnight, so braces PR 79, the biggest-install review on the board, is today's best use of a contributor's hour."
+headline: "Quiet Wednesday: every new npm High advisory overnight already ships a fix, so deepmerge PR 277, a ~102M-install prototype fix stuck without a maintainer response, is today's best review."
 paragraphs:
-  - "Morning refresh for 2026-10-20 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs are still open and unmerged, both Ready tracking issues are still open, and no package on the board has shipped a patched npm release. GHSA has published no new npm High or Critical advisories since the 2026-10-15 batch (TanStack Start, Qwik, OpenNext Cloudflare, Claude Code), all of which already ship fixes, and the newest Snyk npm entries are malicious-package takedowns plus a qs issue with a fix, so no cards were added or dropped."
-  - "braces (~169M weekly installs) now has six open PRs, with PR 79 plus alternatives 78, 82, 87 and 88 all targeting the same nesting-depth issue, so a review that compares them helps the maintainer pick one. Next by installs are uri-js PR 107 (~155M), deepmerge PR 277 (~102M) and node-forge PR 1152 (~40M). The Critical PRs at gray-matter 182, decompress 112 and zerox 208 still wait on maintainers, while TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards for writing a fix."
+  - "Morning refresh for 2026-10-21 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs are still open and unmerged, both Ready tracking issues are still open, and no package on the board has shipped a patched npm release. GHSA's overnight npm High advisories (markdown-it, launch-editor, apostrophe and the Model Context Protocol SDK and server) all list patched versions, and the newest Snyk npm entries for openclaw and @backstage/backend-defaults also have upgrades available, so no cards were added or dropped."
+  - "deepmerge (~102M weekly installs) still sits at 4.3.1 after the maintainer closed issue 273, which makes a careful review of PR 277 the clearest signal that the fix is real. braces PR 79 (~169M), uri-js PR 107 (~155M) and node-forge PR 1152 (~40M) remain the other high-install reviews. The Critical PRs at gray-matter 182, decompress 112 and zerox 208 still wait on maintainers, while TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards for writing a fix."
 pick:
   label: "Worth doing today"
-  package: braces
+  package: deepmerge
   action_label: "Review the open PR"
-  action_url: "https://github.com/micromatch/braces/pull/79"
-  approach: "Check out PR 79, run the braces test suite, and leave a short review noting how it compares with PRs 78, 82, 87 and 88 on scope and test coverage, so the maintainer has one clear candidate to merge before a release past 3.0.3."
+  action_url: "https://github.com/TehShrike/deepmerge/pull/277"
+  approach: "Check out PR 277, run the deepmerge test suite, and leave a short review confirming that merged results keep their expected prototype and that existing merge behavior is unchanged, so the maintainer has concrete evidence before a release past 4.3.1."
