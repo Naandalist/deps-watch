@@ -1,10 +1,10 @@
-headline: "Quiet Wednesday: every new npm High advisory overnight already ships a fix, so deepmerge PR 277, a ~102M-install prototype fix stuck without a maintainer response, is today's best review."
+headline: "New overnight: picomatch (~316M weekly installs) has a High ReDoS with no fixed version and no fix PR, making it today's best chance to write a patch."
 paragraphs:
-  - "Morning refresh for 2026-10-21 (Asia/Jakarta). Re-opened every action_url: all eight fix PRs are still open and unmerged, both Ready tracking issues are still open, and no package on the board has shipped a patched npm release. GHSA's overnight npm High advisories (markdown-it, launch-editor, apostrophe and the Model Context Protocol SDK and server) all list patched versions, and the newest Snyk npm entries for openclaw and @backstage/backend-defaults also have upgrades available, so no cards were added or dropped."
-  - "deepmerge (~102M weekly installs) still sits at 4.3.1 after the maintainer closed issue 273, which makes a careful review of PR 277 the clearest signal that the fix is real. braces PR 79 (~169M), uri-js PR 107 (~155M) and node-forge PR 1152 (~40M) remain the other high-install reviews. The Critical PRs at gray-matter 182, decompress 112 and zerox 208 still wait on maintainers, while TidGi issue 713 (Critical) and gpt-crawler issue 418 remain the Ready cards for writing a fix."
+  - "Morning refresh for 2026-10-22 (Asia/Jakarta). Snyk published CVE-2026-112366 for picomatch: single-branch repeated extglob patterns slip past the analyzeRepeatedExtglob guard in lib/parse.js, and every release through 4.0.7 is affected. Tracking issue 234 is open and no open pull request targets the bug, so it joins the board as a Ready card. GHSA's new npm High and Critical advisories (Storybook, ApostropheCMS import-export, markdown-it, launch-editor and the Model Context Protocol SDK) all ship patched versions, so they were not added."
+  - "Re-opened every other action_url: all eight fix PRs are still open and unmerged, the TidGi and gpt-crawler tracking issues are still open, and no package on the board has a patched npm release. deepmerge PR 277, braces PR 79, uri-js PR 107 and node-forge PR 1152 remain the high-install reviews, while the Critical PRs for gray-matter 182, decompress 112 and zerox 208 still wait on maintainers."
 pick:
   label: "Worth doing today"
-  package: deepmerge
-  action_label: "Review the open PR"
-  action_url: "https://github.com/TehShrike/deepmerge/pull/277"
-  approach: "Check out PR 277, run the deepmerge test suite, and leave a short review confirming that merged results keep their expected prototype and that existing merge behavior is unchanged, so the maintainer has concrete evidence before a release past 4.3.1."
+  package: picomatch
+  action_label: "Write a fix PR"
+  action_url: "https://github.com/micromatch/picomatch/issues/234"
+  approach: "Read issue 234 and the analyzeRepeatedExtglob logic in lib/parse.js, coordinate on the issue before opening a pull request, and propose a change that covers single-branch repeated extglobs with regression tests and benchmarks showing matching stays fast."
